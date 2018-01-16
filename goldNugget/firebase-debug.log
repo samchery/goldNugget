@@ -1,0 +1,32 @@
+[debug] [2018-01-16T14:23:37.815Z] ----------------------------------------------------------------------
+[debug] [2018-01-16T14:23:37.817Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-16T14:23:37.817Z] CLI Version:   3.16.0
+[debug] [2018-01-16T14:23:37.817Z] Platform:      win32
+[debug] [2018-01-16T14:23:37.817Z] Node Version:  v8.9.4
+[debug] [2018-01-16T14:23:37.818Z] Time:          Tue Jan 16 2018 15:23:37 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T14:23:37.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-16T14:23:37.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-16T14:23:37.838Z] > authorizing via signed-in user
+[debug] [2018-01-16T14:23:37.841Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobileapp-7c55e  
+  
+ Tue Jan 16 2018 15:23:37 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T14:23:42.775Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-16T14:23:42.776Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobileapp-7c55e/tokens  
+  
+ Tue Jan 16 2018 15:23:42 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T14:23:46.525Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\MAMP\htdocs\goldNugget\goldNugget'...
+[info] 
+[debug] [2018-01-16T14:23:46.529Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mobileapp-7c55e  
+  
+ Tue Jan 16 2018 15:23:46 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T14:23:51.433Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-16T14:23:51.434Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/269241580294/clients/_:getWebAppConfig  
+  
+ Tue Jan 16 2018 15:23:51 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T14:23:54.207Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

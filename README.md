@@ -8,3 +8,6 @@ Les participants et leurs rôles :
 * __Contenu__ = Viviane
 * __Base de Données__ = Samantha
 
+
+Instruction : 
+* $ cordova run browser
