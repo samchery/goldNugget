@@ -8,8 +8,3 @@ Les participants et leurs rôles :
 * __Contenu__ = Viviane
 * __Base de Données__ = Samantha
 
-
-Instruction :
-$ cd goldNugget
-$ firebase use mobileapp-7c55e
-$ firebase serve
