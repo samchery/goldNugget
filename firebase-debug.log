@@ -1,110 +1,41 @@
-[debug] [2018-01-16T10:28:21.066Z] ----------------------------------------------------------------------
-[debug] [2018-01-16T10:28:21.068Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-16T10:28:21.068Z] CLI Version:   3.16.0
-[debug] [2018-01-16T10:28:21.068Z] Platform:      win32
-[debug] [2018-01-16T10:28:21.068Z] Node Version:  v8.9.4
-[debug] [2018-01-16T10:28:21.069Z] Time:          Tue Jan 16 2018 11:28:21 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:21.069Z] ----------------------------------------------------------------------
+[debug] [2018-01-16T13:27:57.405Z] ----------------------------------------------------------------------
+[debug] [2018-01-16T13:27:57.407Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-16T13:27:57.407Z] CLI Version:   3.16.0
+[debug] [2018-01-16T13:27:57.407Z] Platform:      win32
+[debug] [2018-01-16T13:27:57.407Z] Node Version:  v8.9.4
+[debug] [2018-01-16T13:27:57.408Z] Time:          Tue Jan 16 2018 14:27:57 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T13:27:57.408Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-01-16T10:28:21.078Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-16T10:28:21.079Z] > authorizing via signed-in user
-[debug] [2018-01-16T10:28:21.081Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobileapp-7c55e  
+[debug] [2018-01-16T13:27:57.436Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-16T13:27:57.436Z] > authorizing via signed-in user
+[debug] [2018-01-16T13:27:57.439Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-16T13:27:57.440Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/TCSW9eDw8Ryq5Ja-eIbqbcFRK4-SG2ZwwtSOhMkZxPk',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Jan 16 2018 14:27:57 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T13:27:57.656Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-16T13:27:57.669Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobileapp-7c55e  
   
- Tue Jan 16 2018 11:28:21 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:22.005Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:28:22.006Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobileapp-7c55e/tokens  
+ Tue Jan 16 2018 14:27:57 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T13:27:58.230Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-16T13:27:58.231Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobileapp-7c55e/tokens  
   
- Tue Jan 16 2018 11:28:22 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:22.651Z] <<< HTTP RESPONSE 200
+ Tue Jan 16 2018 14:27:58 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T13:27:59.013Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'C:\MAMP\htdocs\mobileApp'...
+[info] === Serving from 'C:\MAMP\htdocs\goldNugget'...
 [info] 
-[debug] [2018-01-16T10:28:22.652Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mobileapp-7c55e  
+[debug] [2018-01-16T13:27:59.017Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mobileapp-7c55e  
   
- Tue Jan 16 2018 11:28:22 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:23.527Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:28:23.529Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/269241580294/clients/_:getWebAppConfig  
+ Tue Jan 16 2018 14:27:59 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T13:27:59.944Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-16T13:27:59.945Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/269241580294/clients/_:getWebAppConfig  
   
- Tue Jan 16 2018 11:28:23 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:24.129Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:28:24.147Z] TypeError: Cannot read property 'public' of undefined
-    at Server.<anonymous> (C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\hosting.js:34:18)
-    at Object.onceWrapper (events.js:313:30)
-    at emitNone (events.js:106:13)
-    at Server.emit (events.js:208:7)
-    at emitListeningNT (net.js:1378:10)
-    at _combinedTickCallback (internal/process/next_tick.js:135:11)
-    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2018-01-16T10:28:56.605Z] ----------------------------------------------------------------------
-[debug] [2018-01-16T10:28:56.606Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-16T10:28:56.607Z] CLI Version:   3.16.0
-[debug] [2018-01-16T10:28:56.607Z] Platform:      win32
-[debug] [2018-01-16T10:28:56.607Z] Node Version:  v8.9.4
-[debug] [2018-01-16T10:28:56.607Z] Time:          Tue Jan 16 2018 11:28:56 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:56.607Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-01-16T10:28:56.616Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-16T10:28:56.616Z] > authorizing via signed-in user
-[debug] [2018-01-16T10:28:56.618Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobileapp-7c55e  
-  
- Tue Jan 16 2018 11:28:56 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:57.445Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:28:57.445Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobileapp-7c55e/tokens  
-  
- Tue Jan 16 2018 11:28:57 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:58.126Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\MAMP\htdocs\mobileApp'...
-[info] 
-[debug] [2018-01-16T10:28:58.128Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mobileapp-7c55e  
-  
- Tue Jan 16 2018 11:28:58 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:58.963Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:28:58.964Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/269241580294/clients/_:getWebAppConfig  
-  
- Tue Jan 16 2018 11:28:58 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:28:59.507Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:28:59.542Z] TypeError: Cannot read property 'public' of undefined
-    at Server.<anonymous> (C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\hosting.js:34:18)
-    at Object.onceWrapper (events.js:313:30)
-    at emitNone (events.js:106:13)
-    at Server.emit (events.js:208:7)
-    at emitListeningNT (net.js:1378:10)
-    at _combinedTickCallback (internal/process/next_tick.js:135:11)
-    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2018-01-16T10:30:46.804Z] ----------------------------------------------------------------------
-[debug] [2018-01-16T10:30:46.806Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chery\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-16T10:30:46.807Z] CLI Version:   3.16.0
-[debug] [2018-01-16T10:30:46.807Z] Platform:      win32
-[debug] [2018-01-16T10:30:46.807Z] Node Version:  v8.9.4
-[debug] [2018-01-16T10:30:46.807Z] Time:          Tue Jan 16 2018 11:30:46 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:30:46.807Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-01-16T10:30:46.816Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-16T10:30:46.817Z] > authorizing via signed-in user
-[debug] [2018-01-16T10:30:46.818Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mobileapp-7c55e  
-  
- Tue Jan 16 2018 11:30:46 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:30:48.408Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:30:48.409Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mobileapp-7c55e/tokens  
-  
- Tue Jan 16 2018 11:30:48 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:30:49.425Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\MAMP\htdocs\mobileApp'...
-[info] 
-[debug] [2018-01-16T10:30:49.427Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mobileapp-7c55e  
-  
- Tue Jan 16 2018 11:30:49 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:30:50.287Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-16T10:30:50.288Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/269241580294/clients/_:getWebAppConfig  
-  
- Tue Jan 16 2018 11:30:50 GMT+0100 (Paris, Madrid)
-[debug] [2018-01-16T10:30:50.928Z] <<< HTTP RESPONSE 200
+ Tue Jan 16 2018 14:27:59 GMT+0100 (Paris, Madrid)
+[debug] [2018-01-16T13:28:00.614Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
 
