@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=500, initial-scale=1">
+    <title>App Mobile</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <h1>HOMEPAGE</h1>
+        <button hidden id="sign-out">
+            Sign-out
+        </button>
+        <button hidden id="sign-in-google">
+            Sign-in with Google
+        </button>
+
+        <div id="wrap-article"></div>
+    </body>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBvKD7Uz4ylHuS8ON3-2YErYi5nhv6m0mM",
+        authDomain: "mobileapp-7c55e.firebaseapp.com",
+        databaseURL: "https://mobileapp-7c55e.firebaseio.com",
+        projectId: "mobileapp-7c55e",
+        storageBucket: "mobileapp-7c55e.appspot.com",
+        messagingSenderId: "269241580294"
+      };
+      firebase.initializeApp(config);
+    </script>
+     <script type="text/javascript" src="js/main.js"></script>
+</html>
