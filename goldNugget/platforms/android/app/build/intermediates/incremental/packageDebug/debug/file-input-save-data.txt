@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 17 23:20:09 CET 2018
+#Wed Jan 17 23:40:46 CET 2018
 5.base=C\:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 42.base=C\:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 32.set=ASSET

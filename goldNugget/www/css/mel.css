@@ -18,25 +18,21 @@
 #inspire, #discover{
   display: inline-block;
   width: 109px; 
-  font-weight: 200;
   color: #fff;
   text-align: center;
 }
 
 .active{
   text-align: center;
-  border-bottom: 2px solid #fff;
   padding: 5px 0;
   font-weight: 700;
   font-size: 24px;
 }
 
 .list-links-nav-inspirer.active {
-  padding: 0 8px 4px;
   border-bottom: 4px solid #00A7FF; }
 
 .list-links-nav-explorer.active {
-  padding: 0 8px 4px;
   border-bottom: 4px solid #FFA751; }
 
 #sign-out {
@@ -59,7 +55,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.explorer {
+.explore {
   background-image: url('../img/fond2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,21 +65,20 @@
   position: relative;
   width: 100%;
   padding: 15px;
-  color: #fff; }
-  .discover .container-all-articles h2,
-  .explore .container-all-articles h2 {
-    width: 345px;
-    height: 60px;
-    margin: 20px 0;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center; }
-
-.discover .container-all-articles, 
-.explore .container-all-articles {
-  margin-bottom: 70px;
+  color: #fff; 
+  padding-bottom: 90px;
 }
+.discover .container-all-articles h2,
+.explore .container-all-articles h2 {
+  width: 345px;
+  height: 60px;
+  margin: 20px 0;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center; 
+}
+
 .info-goldn {
   width: 100%;
   margin: 20px 0;
@@ -152,12 +147,6 @@
     border-radius: 3px;
     background-image: linear-gradient(124deg, #00a6ff, #00fffa);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25); }
-
-    .container-advice .approve.is-selected{
-      text-align: center;
-      padding-top: 5px;
-  }
-
     .container-advice .approve p {
       font-size: 12px;
       text-align: center;
@@ -171,17 +160,6 @@
     border-radius: 3px;
     background-image: linear-gradient(128deg, #ffa751, #ffe259);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25); }
-
-    .container-advice .dislike.is-selected {
-      width: 85px;
-      text-align: center;
-      padding-top: 5px;
-      right: 13px;
-  }
-  .container-advice .dislike.is-selected img{
-      display: none;
-  }
-  
     .container-advice .dislike img {
       position: absolute;
       top: 50%;

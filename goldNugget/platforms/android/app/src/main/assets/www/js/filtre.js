@@ -5,7 +5,9 @@ AppMobile.prototype.createFiltreArticle = function() {
         var filtre = document.createElement('div');
         filtre.setAttribute('id', 'filtre');
         filtre.innerHTML = '<ul class="filter-container"><li id="Restaurant" class="list-filter">Restaurant</li><li id="Promenade" class="list-filter">Promenade</li><li id="Culture" class="list-filter">Culture</li></ul>';
-        this.filtre.appendChild(filtre);
+        
+        var filtrediv = document.querySelector('.container-filtre');
+        filtrediv.appendChild(filtre);
         
         // listener on filtre
         document.getElementById('Restaurant').addEventListener('click', this.showRestaurant.bind(this));
