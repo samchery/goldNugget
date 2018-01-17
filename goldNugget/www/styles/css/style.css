@@ -25,12 +25,15 @@ main {
   height: 100vh; }
 
 .container-header {
+  padding: 0 15px;
+  padding-top: 15px;
   background: red;
   display: flex;
   align-items: center; }
 
 .link-logo {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0; }
   .link-logo .logo-header {
     width: 46px;
     height: 43px; }
@@ -41,10 +44,19 @@ main {
     list-style: none; }
     .nav-header .container-links-nav .list-links-nav {
       display: inline-block; }
+    .nav-header .container-links-nav .inspirer, .nav-header .container-links-nav .explorer {
+      font-weight: 200;
+      color: #fff;
+      font-size: 18px; }
+      .nav-header .container-links-nav .inspirer.active, .nav-header .container-links-nav .explorer.active {
+        font-weight: 700;
+        font-size: 24px; }
 
 .discover {
   width: 100%;
-  color: #fff; }
+  color: #fff;
+  height: 100vh;
+  position: relative; }
   .discover .container-all-articles {
     padding: 0 15px;
     width: 100%;
@@ -171,7 +183,8 @@ main {
   padding: 0 15px;
   padding-top: 1%;
   background: #fff;
-  position: relative; }
+  position: relative;
+  display: none; }
 
 .label-form {
   width: 100%;

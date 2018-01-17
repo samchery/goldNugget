@@ -1,4 +1,6 @@
 .container-header {
+    padding: 0 15px;
+    padding-top: 15px;
     background: red;
     display: flex;
     align-items: center;
@@ -6,6 +8,7 @@
 
 .link-logo {
     display: inline-block;
+    margin: 0;
 
     .logo-header {
         width: 46px;
@@ -21,6 +24,17 @@
 
         .list-links-nav {
             display: inline-block;
+        }
+
+        .inspirer, .explorer {
+            font-weight: 200;
+            color: #fff;
+            font-size: 18px;
+
+            &.active {
+                font-weight: 700;
+                font-size: 24px;
+            }
         }
     }
 }
