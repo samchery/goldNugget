@@ -67,7 +67,7 @@ AppMobile.prototype.createFormArticle = function() {
         form.innerHTML = '<label class="label-form">Le nom de votre perle</label>';
         form.innerHTML += '<input required="required" type="text" value="" class="title-input-add input-form"/>';
         form.innerHTML += '<label class="label-form">Décrivez votre perle</label>';
-        form.innerHTML += '<textarea required="required" class="form-content" rows="7"></textarea>';
+        form.innerHTML += '<textarea required="required" class="form-content" rows="3"></textarea>';
         form.innerHTML += '<label class="label-form">L\'adresse de votre perle</label>';
         form.innerHTML += '<input required="required" type="text" class="form-adress input-form" value=""/>';
         form.innerHTML += '<input required="required" id="img" type="file" class="form-image"/>';
