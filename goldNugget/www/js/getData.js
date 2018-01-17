@@ -36,7 +36,6 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
 
 // Display form
 AppMobile.prototype.createFormArticle = function() {
-    console.log('clic');
     if(null == document.querySelector('.container-add-article form')){
         var form = document.createElement('form');
         form.className = 'add-article';
@@ -48,12 +47,11 @@ AppMobile.prototype.createFormArticle = function() {
         form.innerHTML += '<input required="required" type="text" class="form-adress input-form" value=""/>';
         form.innerHTML += '<input required="required" id="img" type="file" class="form-image"/>';
         form.innerHTML += '<label class="label-form">Sélectionner une catégorie</label>';
-        form.innerHTML += '<select class="select-form"><option value="Culture">Culture</option><option value="Prommenade">Prommenade</option><option value="Restaurant">Restaurant</option></select>';
+        form.innerHTML += '<select required="required" class="select-form"><option value="Culture">Culture</option><option value="Prommenade">Prommenade</option><option value="Restaurant">Restaurant</option></select>';
         form.innerHTML += '<button type="button" class="form-button button-add-article"/>OK</button>';
         this.form.appendChild(form);
         this.addArticleButton = document.querySelector('.container-add-article .form-button');
         this.addArticleButton.addEventListener('click', this.addArticle.bind(this));
-        
     } else{
         document.querySelector('.container-add-article form').remove();
     }
@@ -66,6 +64,7 @@ AppMobile.prototype.addArticle = function() {
     var title = document.querySelector('.title-input-add').value;
     var content = document.querySelector('.form-content').value;
     var address = document.querySelector('.form-adress').value;
+    var select = document.querySelector('.select-form').value;
     var selectedFile = document.getElementById('img').files[0];
 
     var storageRef = firebase.storage().ref(selectedFile.name);
@@ -76,9 +75,9 @@ AppMobile.prototype.addArticle = function() {
                 title: title,
                 description: content,
                 address : address,
-                img: selectedFile.name
+                img: selectedFile.name,
+                category: select
             });
         }
     });
-
 };
