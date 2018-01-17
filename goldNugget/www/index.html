@@ -27,25 +27,18 @@
         <!-- DEBUT de la partie "faire explorer" -->
         <main class="discover" style="display:none;">
             <div class="container-add-article">
-                <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
-                <div class="add-article">
-                    <h3>Titre</h3>
-                    <p>Décrivez votre trouvaille</p>
+                <p>Ajouter</p>
+                <form class="add-article">
+                    <label>Le nom de votre perle</label>
+                    <input type="text" name="title" value="" class="title-input-add">
+                    <label>Décrivez votre perle</label>
                     <textarea name="describe" rows="8" cols="80">
                     </textarea>
-                    <div class="img-article">
-                        <div class="picture-place">
-                            <img src="#" alt="">
-                        </div>
-                        <div class="adress-place">
-                            <p class="street-address">36, Boulevard Beau-séjour</p>
-                            <p class="location-adress">75017 Paris             </p>
-                        </div>
-                    </div>
-                    <div class="button-add-article">
-                        <p>OK</p>
-                    </div>
-                </div>
+                    <label>L'adresse de votre perle</label>
+                    <input type="text" name="adress" value="">
+                    <input type="image" src="#" value="Ajouter une image" class="button-image"/>
+                    <button type="button" name="button" class="button-add-article">OK</button>
+                </form>
             </div>
             <div class="container-all-articles">
                 <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
