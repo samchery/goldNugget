@@ -1,13 +1,13 @@
-.discover {
+.discover,
+.explore {    
+    position: relative;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     color: #fff;
     .container-all-articles {
-        position: relative;
         h2 { 
             width: 345px;
             height: 60px;
-            font-family: Raleway;
             font-size: 25px;
             font-weight: 600;
             line-height: 1.2;
@@ -15,9 +15,11 @@
         }
     }
 }
+
 .info-goldn {
     width: 100%;
     margin: 20px 0;
+    line-height: 1.5;
     padding: 0 13px;
     font-size: 16px !important;
 }
@@ -48,10 +50,9 @@
     }
 }
 .container-address {
-    position: relative;
     .street-address {
         position: absolute;
-        bottom: -30px;
+        bottom: 7px;
         font-size: 14px;
         font-weight: 100;
     }
@@ -107,5 +108,36 @@
             transform: translate(50%, -40%);
             width: 26px;
         }
+    }
+}
+
+
+/*EXPLORER */
+
+.wrapper-info-explorer {
+    margin: 30px 0 15px;
+}
+.info-goldn-explorer {
+    display: inline;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 20px !important;
+}
+
+.city-name{
+    display: inline;
+    width: 77px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 3px;
+    color: #ffa751;
+    border: none;
+}
+.container-address-explorer {
+    .street-address-explorer {
+        position: absolute;
+        bottom: 7px;
+        font-size: 14px;
+        font-weight: 100;
     }
 }

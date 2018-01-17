@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=500, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>App Mobile</title>
         <link rel="stylesheet" href="styles/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
@@ -23,7 +23,7 @@
             </ul>
         </header> -->
         <!-- DEBUT de la partie "faire explorer" -->
-        <main class="discover">
+        <div class="discover" >
             <!-- <div class="container-add-article" >
                 <p>Ajouter</p>
                 <form class="add-article" >
@@ -41,95 +41,91 @@
             <div class="container-all-articles clearfix">
                 <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
                 <p class="info-goldn">J'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d'autres habitants de <span class="choose-city">Tokyo</span>, j’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p>
-
-                <div class="wrap-articles clearfix" id="wrap-articles">
-                    <div class="article-detail">
-                        <h3>Scarmouche</h3>
-                        <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
-                        <!-- <div class="container-author">
-                            <img src="#" alt="">
-                            <p class="name-author">Auteur</p>
-                        </div> -->
-                        <div class="container-address">
-                            <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
+                <div id="wrap-articles">
+                    <div class="wrap-articles clearfix">
+                        <div class="article-detail">
+                            <h3>Scarmouche</h3>
+                            <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
+                            <!-- <div class="container-author">
+                                <img src="#" alt="">
+                                <p class="name-author">Auteur</p>
+                            </div> -->
+                            <div class="container-address">
+                                <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
+                            </div>
                         </div>
+                        <div class="article-detail">
+                            <div class="img-article-detail">
+                                <img src="images/scaramouche.jpg" alt="">
+                            </div>
+                            <div class="container-advice">
+                                <div class="approve">
+                                    <p>J'approuve</p>
+                                </div>
+                                <div class="dislike">
+                                    <img src="images/dislike.svg" alt="dislike image">
+                                </div>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="article-detail">
-                        <div class="img-article-detail">
-                            <img src="images/scaramouche.jpg" alt="">
-                        </div>
-                        <div class="container-advice">
-                            <div class="approve">
-                                <p>J'approuve</p>
+                    <div class="wrap-articles clearfix" id="wrap-articles">
+                        <div class="article-detail">
+                            <h3>Scarmouche</h3>
+                            <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
+                            <!-- <div class="container-author">
+                                <img src="#" alt="">
+                                <p class="name-author">Auteur</p>
+                            </div> -->
+                            <div class="container-address">
+                                <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
                             </div>
-                            <div class="dislike">
-                                <img src="images/dislike.svg" alt="dislike image">
+                        </div>
+                        <div class="article-detail">
+                            <div class="img-article-detail">
+                                <img src="images/scaramouche.jpg" alt="">
                             </div>
-                        </div>
-                    </div> 
-                </div>
-                <div class="wrap-articles clearfix" id="wrap-articles">
-                    <div class="article-detail">
-                        <h3>Scarmouche</h3>
-                        <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
-                        <!-- <div class="container-author">
-                            <img src="#" alt="">
-                            <p class="name-author">Auteur</p>
-                        </div> -->
-                        <div class="container-address">
-                            <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
-                        </div>
+                            <div class="container-advice">
+                                <div class="approve">
+                                    <p>J'approuve</p>
+                                </div>
+                                <div class="dislike">
+                                    <img src="images/dislike.svg" alt="dislike image">
+                                </div>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="article-detail">
-                        <div class="img-article-detail">
-                            <img src="images/scaramouche.jpg" alt="">
-                        </div>
-                        <div class="container-advice">
-                            <div class="approve">
-                                <p>J'approuve</p>
-                            </div>
-                            <div class="dislike">
-                                <img src="images/dislike.svg" alt="dislike image">
-                            </div>
-                        </div>
-                    </div> 
                 </div>
             </div>
-        </main>
+        </div>
         <!-- FIN de la partie "faire explorer" -->
         <!-- rmq: Dans le header, la classe active switchera sur le li "visiter" -->
         <!-- DEBUT de la partie "visiter" -->
-        <main class="visit" style="display:none;">
-            <div class="container-all-articles">
-                <h2>Profitez des trouvailles de la ville de <span class="choose-city">Paris</span></h2>
-                <p>Je visite <input type="text" name="" value="Paris">,</p>
-                <p>et je veux découvrir des charmes !</p>
-                <div id="wrap-article">
-                    <div class="">
-                        <h3>Titre</h3>
-                        <p>Profitez des trouvailles Profitez des trouvailles Profitez des trouvailles</p>
-                    </div>
-                    <div class="">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="container-address">
-                        <p class="">36, Boulevard  Beau-séjour, 75017 Paris</p>
-                    </div>
+        <div class="explore clearfix" style="display:none;">
+            <div class="container-all-articles clearfix">
+                <h2>Vous aussi, profitez des perles de la ville de <span class="choose-city">Paris</span></h2>
+                <div class="wrapper-info-explorer">
+                    <p class="info-goldn-explorer">Je visite</p> 
+                    <input type="text" name="city-name" class="city-name"> 
+                    <p class="info-goldn-explorer">,<br>  je veux découvrir ses charmes !</p>
                 </div>
-                <div class="container-category">
-                    <nav>
-                        <p>Choisissez un filtre :</p>
-                        <ul class="menu-list-category">
-                            <li class="all">Toutes les catégories</li>
-                            <li class="food">Restauration</li>
-                            <li class="walking">Promenade</li>
-                            <li class="museum">Musée</li>
-                            <li class="entertainment">Divers</li>
-                        </ul>
-                    </nav>
+                <div id="wrap-articles clearfix">
+                    <div class="wrap-articles clearfix">
+                        <div class="article-detail">
+                            <h3>Deyroll</h3>
+                            <p class="info-city">Cette maison bicentenaire est aujourd'hui le dernier cabinet de curiosités ouvert au public, qui offre la….</p>
+                            <div class="container-address-explorer">
+                                <p class="street-address-explorer">46 Rue du Bac, 75007 Paris</p>
+                            </div>
+                        </div>
+                        <div class="article-detail">
+                            <div class="img-article-detail">
+                                <img src="images/scaramouche.jpg" alt="">
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
-        </main>
+        </div>
         <!-- FIN de la partie "visiter" -->
     </body>
     <script type="text/javascript" src="cordova.js"></script>
@@ -147,5 +143,5 @@
       };
       firebase.initializeApp(config);
     </script>
-     <script type="text/javascript" src="js/main.js"></script>
+     <script type="text/javascript" src="js/div.js"></script>
 </html>
