@@ -97,11 +97,16 @@ AppMobile.prototype.showTouristSection = function(){
     header += '<button hidden id="sign-out">Sign-out</button></header>';
 
     var contentStart = '<div class="explore">';
-    var contentFiltre = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Filtrer</p></div></div>';
+    var contentFiltre = '<div class="container-filtre"><div class="onglet-filtre"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-filtre">Filtrer</p></div></div>';
     var contentArticle = '<div class="container-all-articles clearfix"><h2>Vous aussi, profitez des perles de la ville de <span class="choose-city">Paris</span></h2><div id="wrap-infos-explorer">';
     var contentEnd = '<div class="wrapper-info-explorer"><p class="info-goldn-explorer">Je visite</p><input type="text" name="city-name" class="city-name"><p class="info-goldn-explorer">,<br>  je veux découvrir ses charmes !</p></div><div id="wrap-articles clearfix"></div></div></div></div>';
 
     app.innerHTML = header + contentStart + contentFiltre + contentEnd;
+
+
+    // filtre
+    this.filtre = document.querySelector('.container-filtre');
+    this.filtre.addEventListener('click', this.createFiltreArticle.bind(this));
 
     // ACTION CHANGE SECTION
     this.inspireButton = document.getElementById('inspire');
