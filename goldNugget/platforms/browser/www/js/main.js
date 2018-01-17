@@ -58,7 +58,7 @@ AppMobile.prototype.showMySection = function(){
     var app = document.getElementById('app');
     app.className = "inspire";
 
-    var header = '<header class="container-header"><img class="link-logo" src="img/logoapp.png" alt="logo">';
+    var header = '<header class="container-header"><img class="link-logo" src="img/perle.png" alt="logo">';
     header += '<div id="inspire" class="active">Partager</div><div id="discover">Explorer</div>';
     header += '<button hidden id="sign-out">Sign-out</button></header>';
 
@@ -92,7 +92,7 @@ AppMobile.prototype.showTouristSection = function(){
     var app = document.getElementById('app');
     app.className = "explore";
 
-    var header = '<header class="container-header"><img class="link-logo" src="img/logoapp.png" alt="logo">';
+    var header = '<header class="container-header"><img class="link-logo" src="img/perle.png" alt="logo">';
     header += '<div id="inspire">Partager</div><div id="discover" class="active">Explorer</div>';
     header += '<button hidden id="sign-out">Sign-out</button></header>';
 

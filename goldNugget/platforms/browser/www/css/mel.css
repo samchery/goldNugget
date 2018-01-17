@@ -12,14 +12,14 @@
   height: 43px; 
 }
 
-.inspire, .discover{
+#inspire, #discover{
   display: inline-block; 
   font-weight: 200;
   color: #fff;
   font-size: 18px;
 }
 
-.active{
+#active{
   font-weight: 700;
   font-size: 24px;
 }
@@ -59,6 +59,10 @@
     line-height: 1.2;
     text-align: center; }
 
+.discover .container-all-articles, 
+.explore .container-all-articles {
+  margin-bottom: 70px;
+}
 .info-goldn {
   width: 100%;
   margin: 20px 0;
