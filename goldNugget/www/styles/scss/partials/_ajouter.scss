@@ -1,8 +1,67 @@
 .container-add-article {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
 }
 
 .onglet-add {
-    text-align: center;
+    height: 90px;
+    position: relative;
+
+    .text-add {
+        font-size: 25px;
+        color: #00A7FF;
+        text-align: center;
+        font-weight: 400;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.add-article {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    //background: #eee;
+}
+
+.label-form {
+    width: 100%;
+    display: block;
+    color: #00A7FF;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.input-form, .form-content {
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    border-radius: 17px;
+    color: #9B9B9B;
+    font-size: 22px;
+    padding: 0px 2px 4px 17px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    outline: none;
+}
+
+.title-input-add {
+    width: 80%;
+}
+
+.button-image, .button-add-article {
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 22px;
+    color: #00A7FF;
+    border: 1px solid #fff !important;
+    background: #fff;
+}
+
+.button-add-article {
+    padding: 20px 0 10px;
+    font-weight: bold;
 }
