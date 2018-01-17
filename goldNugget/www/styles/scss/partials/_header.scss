@@ -1,7 +1,8 @@
 .container-header {
     padding: 0 15px;
     padding-top: 15px;
-    background: red;
+    padding-bottom: 20px;
+    //background: red;
     display: flex;
     align-items: center;
 }
@@ -21,36 +22,38 @@
 
     .container-links-nav {
         list-style: none;
+    }
+}
 
-        .list-links-nav {
-            display: inline-block;
-            border-bottom: 1px solid white;
-        }
+.list-links-nav {
+    display: inline-block;
+    border-bottom: 1px solid white;
+    padding-bottom: 1px;
+    margin: 0 25px;
+}
 
-        .inspirer, .explorer {
-            font-weight: 200;
-            color: #fff;
-            font-size: 18px;
-            text-decoration: none;
+.inspirer, .explorer {
+    font-weight: 200;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
 
-            &.active {
-                font-weight: 700;
-                font-size: 24px;
-            }
-        }
+    &.active {
+        font-weight: 700;
+        font-size: 24px;
     }
 }
 
 .list-links-nav-inspirer {
     &.active {
-        padding: 0 4px 4px;
-        border-bottom: 2px solid #00A7FF;
+        padding: 0 8px 4px;
+        border-bottom: 4px solid #00A7FF;
     }
 }
 
 .list-links-nav-explorer {
     &.active {
-        padding: 0 4px 4px;
-        border-bottom: 2px solid #FFA751;
+        padding: 0 8px 4px;
+        border-bottom: 4px solid #FFA751;
     }
 }
