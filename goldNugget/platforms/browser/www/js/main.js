@@ -59,7 +59,7 @@ AppMobile.prototype.showMySection = function(){
 
     var header = '<header class="container-header"><img class="link-logo" src="img/perle.png" alt="logo">';
     header += '<div id="inspire" class="active">Partager</div><div id="discover">Explorer</div>';
-    header += '<button id="sign-out">Sign-out</button></header>';
+    header += '<button id="sign-out">Déconnexion</button></header>';
 
     var contentStart = '<div class="discover">';
     var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
@@ -87,11 +87,11 @@ AppMobile.prototype.showMySection = function(){
 
 AppMobile.prototype.showTouristSection = function(){
     var app = document.getElementById('app');
-    app.className = "explore";
+    app.className = "explorer";
 
     var header = '<header class="container-header"><img class="link-logo" src="img/perle.png" alt="logo">';
     header += '<div id="inspire">Partager</div><div id="discover" class="active">Explorer</div>';
-    header += '<button id="sign-out">Sign-out</button></header>';
+    header += '<button id="sign-out">Déconnexion</button></header>';
 
     var contentStart = '<div class="explore">';
     var contentFiltre = '<div class="container-filtre"><div class="onglet-filtre"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-filtre">Filtrer</p></div></div>';

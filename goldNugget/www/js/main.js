@@ -87,7 +87,7 @@ AppMobile.prototype.showMySection = function(){
 
 AppMobile.prototype.showTouristSection = function(){
     var app = document.getElementById('app');
-    app.className = "explore";
+    app.className = "explorer";
 
     var header = '<header class="container-header"><img class="link-logo" src="img/perle.png" alt="logo">';
     header += '<div id="inspire">Partager</div><div id="discover" class="active">Explorer</div>';

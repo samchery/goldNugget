@@ -55,6 +55,8 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
           img.src = url;
         });
     }
+
+    this.favoriteArticle();
 };
 
 // Display form

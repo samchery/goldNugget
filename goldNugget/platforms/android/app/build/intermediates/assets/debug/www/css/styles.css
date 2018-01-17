@@ -1,4 +1,30 @@
-/* SAM */
+* {
+    margin: 0 auto;
+    padding: 0; 
+}
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box; 
+}
+  
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    display: table;
+}
+  
+  .clearfix:after {
+    clear: both; 
+}
+    
+body {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 16px;
+}
+
+/* Splash & login screen */
 
 .notConnected{
     position: relative;
@@ -31,6 +57,31 @@
     height: 10px;
 }
 
-.connected{
-    background: beige;
+/* AUTOCOMPLETE */
+
+.results-autocomplete{
+    position: absolute;
+    top: 36px;
+    left: 80px;
+    list-style-type: none;
+    padding: 0;
+    width: 150px;
+}
+.results-autocomplete li{
+    cursor: pointer;
+    background: #FAFAFA;
+    color: #333;
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.results-autocomplete li:last-child{
+    border-bottom: none;
+}
+.wrapper-info-explorer{
+    position: relative;
+}
+
+.explore .container-advice{
+    display: none;
 }
