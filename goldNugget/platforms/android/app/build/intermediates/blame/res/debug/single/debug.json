@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
-        "source": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
-    },
-    {
         "merged": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxxhdpi_screen.png.flat",
         "source": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
+        "source": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
     },
     {
         "merged": "C:\\MAMP\\htdocs\\goldNugget\\goldNugget\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi_screen.png.flat",

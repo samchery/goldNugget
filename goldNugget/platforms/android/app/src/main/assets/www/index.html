@@ -19,15 +19,36 @@
 
         <div id="wrap-article"></div>
         <div id="message">ici</div>
-
-        <div class="autocomplete-container">
-            <input type="text" autofocus="true" name="autofocus sample" placeholder="search your town" id="search-bar"></input>
-            <ul class="results"></ul>
+        <div id="form">
+            <button class="access">
+                Form
+            </button>
         </div>
+
+<!-- <form class="add-article">
+    <label>Le nom de votre perle</p>
+    <input type="text" name="title" value="" class="title-input-add">
+    <label>Décrivez votre perle</p>
+    <textarea name="describe" rows="8" cols="80">
+    </textarea>
+    <label>L'adresse de votre perle</p>
+    <input type="text" name="adress" value="">
+    <input type="image" src="#" value="Ajouter une image" class="button-image"/>
+    <button id="form" type="button" name="button" class="button-add-article">OK</button>
+</form> -->
+
+
+
+
+
+
     </body>
+    <!-- cordova -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <!-- fin cordova -->
 
+    <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -41,5 +62,8 @@
       };
       firebase.initializeApp(config);
     </script>
-     <script type="text/javascript" src="js/main.js"></script>
+    <!-- fin firebase -->
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/getData.js"></script>
 </html>

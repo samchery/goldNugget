@@ -1,18 +1,23 @@
-function AppMobile() {
+function AppMobile() {  // syntaxe class
     // Shortcuts to DOM Elements.
-    this.articleList = document.getElementById('wrap-article');
+    this.articleList = document.getElementById('wrap-article'); // syntaxe propriétés
     this.signInGoogleButton = document.querySelector('#sign-in-google');
     this.signOutButton = document.querySelector('#sign-out');
+    this.createArticleButton = document.querySelector('#form .access');
+    this.form = document.querySelector('#form');
+
+
 
     // EventListener
     this.signOutButton.addEventListener('click', this.signOut.bind(this));
     this.signInGoogleButton.addEventListener('click', this.signInGoogle.bind(this));
+    this.createArticleButton.addEventListener('click', this.createArticle.bind(this));
 
     this.initFirebase();
   }
 
 // Sets up shortcuts to Firebase features and initiate firebase auth.
-AppMobile.prototype.initFirebase = function() {
+AppMobile.prototype.initFirebase = function() {     // syntaxe méthode
     // Shortcuts to Firebase SDK features.
     this.auth = firebase.auth();
     this.database = firebase.database();
@@ -32,9 +37,10 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
         this.signInGoogleButton.setAttribute('hidden', 'true');
 
         // Action
-        this.loadArticles();
-  
+        this.loadArticles(); // cf getData.js
+
     } else {
+        // TODO action pour revenir accueil et enlever toutes les données à l'écran
         document.getElementById('message').html = "log out";
         console.log("log out");
         this.signOutButton.setAttribute('hidden', 'true');
@@ -63,89 +69,6 @@ AppMobile.prototype.signOut = function() {
     console.log('log out');
     this.auth.signOut();
 };
-
-AppMobile.prototype.loadArticles = function() {
-    console.log('article');
-    this.articlesRef = this.database.ref('articles');
-    // Make sure we remove all previous listeners.
-    this.articlesRef.off();
-
-    // Loads the last 12 articles
-    var setArticle = function(data) {
-        var val = data.val();
-        this.displayArticle(data.key, val.title, val.description, val.address, val.category);
-    }.bind(this);
-
-    this.articlesRef.limitToLast(12).on('child_added', setArticle);
-    this.articlesRef.limitToLast(12).on('child_changed', setArticle);
-};
-
-// Displays a Article in the UI.
-AppMobile.prototype.displayArticle = function(key, title, description, address, category) {
-    var div = document.getElementById(key);
-
-    // If an element for that article does not exists yet we create it.
-    if (!div) {
-      var container = document.createElement('div');
-      container.innerHTML = '<p class="message-container"><h3>' + title + '</h3>';
-      container.innerHTML += '<h4>' + address + '</h4><span>' + category + '</span><p>' + description + '</p>';
-      container.setAttribute('id', key);
-      console.log(container);
-      this.articleList.appendChild(container);
-    }
-};
-
-
-
-// variables
-var input = document.querySelector('#search-bar');
-var town = ['paris', 'meaux', 'pau', 'lille', 'anvers'];
-// var results;
-
-
-// function
-function autocomplete(val) {
-    var town_return = []; // tableau de stockage
-    for (i = 0; i < town.length; i++) { // autant de tour qu'il y a de villes
-        if (val === town[i].slice(0, val.length)) {  // ajuste la longueur du nom de la ville à celle du nb de lettres tapées
-          town_return.push(town[i]); // ajout du nom de la ville dans le tableau temporaire
-        }
-    }
-    return town_return; // renovie le tableau comme résultat
-}
-
-var autocomplete_results = document.querySelector(".results");
-var results = document.querySelectorAll(".results li");
-
-// events
-input.addEventListener('keyup', function(e){
-        input_val = this.value; // updates the variable on each ocurrence
-        if (input_val.length > 0) { // non vide
-            var town_to_show = [];
-
-            autocomplete_results = document.querySelector(".results"); // ul
-            autocomplete_results.innerHTML = '';
-            town_to_show = autocomplete(input_val);
-
-            for (i = 0; i < town_to_show.length; i++) {
-                autocomplete_results.innerHTML += '<li>' + town_to_show[i] + '</li>';
-            }
-            autocomplete_results.style.display = 'block';
-        } else {
-            town_to_show = [];
-            autocomplete_results.innerHTML = '';
-        }
-    });
-
-if (results.length > 0){
-    console.log('ok')
-    for (var i = 0; i < results.length; i++){
-        results[i].addEventListener('click', function(e){
-            input_val = this.value;
-            console.log(input_val)
-        });
-    }
-}
 
 window.onload = function() {
     window.appMobile = new AppMobile();
