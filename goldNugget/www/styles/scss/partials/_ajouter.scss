@@ -33,7 +33,7 @@
     padding-top: 1%;
     background: #fff;
     position: relative;
-    display: none;
+    //display: none;
 }
 
 .label-form {
@@ -74,4 +74,23 @@
 .button-add-article {
     padding: 20px 0 10px;
     font-weight: bold;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    font-weight: 600;
+    font-size: 22px;
+    color: #00A7FF;
 }

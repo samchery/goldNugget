@@ -171,8 +171,7 @@ main {
   padding: 0 15px;
   padding-top: 1%;
   background: #fff;
-  position: relative;
-  display: none; }
+  position: relative; }
 
 .label-form {
   width: 100%;
@@ -208,5 +207,22 @@ main {
 .button-add-article {
   padding: 20px 0 10px;
   font-weight: bold; }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.inputfile + label {
+  width: 200px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 600;
+  font-size: 22px;
+  color: #00A7FF; }
 
 /*# sourceMappingURL=style.css.map */
