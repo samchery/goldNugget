@@ -40,12 +40,9 @@ AppMobile.prototype.loadAutocomplete = function(){
         var results = document.querySelectorAll(".results-autocomplete li");
         if (results.length > 0){
             for (let i = 0; i < results.length; i++){
+                var current = results[i];
                 results[i].addEventListener('click', function(){
                     input_val = this.innerHTML;
-                    
-                    // GET ARTICLES
-                    //this.loadArticles(false, 'Paris'); 
-
                     input.value = input_val;
                     autocomplete_results.style.display = 'none';
                     input.style.fontSize= "20px";

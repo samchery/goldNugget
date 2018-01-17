@@ -82,7 +82,7 @@ AppMobile.prototype.showMySection = function(){
     this.discoverButton.addEventListener('click', this.showTouristSection.bind(this));
 
     // Action
-    this.loadArticles('Paris'); 
+    this.loadArticles('paris'); 
 }
 
 AppMobile.prototype.showTouristSection = function(){
@@ -106,19 +106,12 @@ AppMobile.prototype.showTouristSection = function(){
 
     this.loadAutocomplete();
 
-    this.cityRequestInput = document.getElementById('search-bar');
-    this.cityRequestInput.addEventListener('change', this.cityRequest.bind(this));
+    // en dur
+    this.loadArticles('marseille'); 
 
-        
     // ACTION CHANGE SECTION
     this.inspireButton = document.getElementById('inspire');
     this.inspireButton.addEventListener('click', this.showMySection.bind(this));
 }
 
-AppMobile.prototype.cityRequest = function(){
-    var city = document.getElementById('search-bar').value;
-    console.log('ic');
-    console.log(city[0].toUpperCase() + city.slice(1));
 
-    this.loadArticles(city); 
-}
