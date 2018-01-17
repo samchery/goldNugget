@@ -39,7 +39,7 @@ AppMobile.prototype.signOut = function() {
 AppMobile.prototype.onAuthStateChanged = function(user) {
     if (user) {
         var app = document.getElementById('app');
-        app.className = "connected";
+        app.className = "inspire";
  
         var header = '<header class="container-header">HEADER<button hidden id="sign-out">Sign-out</button></header>';
 

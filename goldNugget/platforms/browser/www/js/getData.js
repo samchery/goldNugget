@@ -22,7 +22,7 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
         var container = document.createElement('div');
         container.className = "wrap-articles clearfix";
         container.innerHTML = '<div class="article-detail"><h3>' + title + '</h3><p class="info-city">' + description + '</p><div class="container-address"><p class="street-address">' + address + '</p></div></div>';
-        container.innerHTML += '<div class="article-detail"><div class="img-article-detail"><img id="img_' +  key + '" src="" /></div><div class="container-advice"><div class="approve"><p>J\'approuve</p></div><div class="dislike"><img src="img/dislike.svg" alt="dislike image"></div></div></div>';
+        container.innerHTML += '<div class="article-detail"><div class="img-article-detail"><img id="img_' +  key + '" src="" /></div><div class="container-advice"><div class="approve"><p>J\'approuve</p></div><div class="dislike"><img src="img/dislike.svg" alt="dislike image"></div></div>';
 
         container.setAttribute('id', key);
         this.articleList.appendChild(container);
@@ -36,16 +36,18 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
 
 // Display form
 AppMobile.prototype.createFormArticle = function() {
+    console.log('clic');
     if(null == document.querySelector('.container-add-article form')){
         var form = document.createElement('form');
-        form.innerHTML = '<label class=""> Le nom de votre perle</label>';
-        form.innerHTML += '<input required="required" type="text" name="title" value="" class="form-title"/>';
-        form.innerHTML += '<label class=""> Décrivez votre perle</label>';
-        form.innerHTML += '<textarea required="required" class="form-content" name="describe" rows="8" cols="80"></textarea>';
-        form.innerHTML += '<label class=""> L\'adresse de votre perle</label>';
-        form.innerHTML += '<input required="required" type="text" name="adress" class="form-adress" value=""/>';
+        form.className = 'add-article';
+        form.innerHTML = '<label class="label-form">Le nom de votre perle</label>';
+        form.innerHTML += '<input required="required" type="text" value="" class="title-input-add input-form"/>';
+        form.innerHTML += '<label class="label-form">Décrivez votre perle</label>';
+        form.innerHTML += '<textarea required="required" class="form-content" rows="7"></textarea>';
+        form.innerHTML += '<label class="label-form">L\'adresse de votre perle</label>';
+        form.innerHTML += '<input required="required" type="text" class="form-adress input-form" value=""/>';
         form.innerHTML += '<input required="required" id="img" type="file" class="form-image"/>';
-        form.innerHTML += '<button type="submit" name="button" class="form-button"/>OK</button>';
+        form.innerHTML += '<button type="button" class="form-button button-add-article"/>OK</button>';
 
         this.form.appendChild(form);
 
@@ -53,8 +55,7 @@ AppMobile.prototype.createFormArticle = function() {
         this.addArticleButton.addEventListener('click', this.addArticle.bind(this));
         
     } else{
-        document.querySelector('#form form').remove();
-        
+        document.querySelector('.container-add-article form').remove();
     }
 };
 
@@ -62,7 +63,7 @@ AppMobile.prototype.createFormArticle = function() {
 // Get created article in data
 AppMobile.prototype.addArticle = function() {
    
-    var title = document.querySelector('.form-title').value;
+    var title = document.querySelector('.title-input-add').value;
     var content = document.querySelector('.form-content').value;
     var address = document.querySelector('.form-adress').value;
     var selectedFile = document.getElementById('img').files[0];

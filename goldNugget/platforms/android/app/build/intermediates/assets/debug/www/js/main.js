@@ -1,20 +1,10 @@
-function AppMobile() {  // syntaxe class
-    // Shortcuts to DOM Elements.
-    this.articleList = document.getElementById('wrap-article'); // syntaxe propriétés
-    this.signInGoogleButton = document.querySelector('#sign-in-google');
-    this.signOutButton = document.querySelector('#sign-out');
-    this.createArticleButton = document.querySelector('#form .access');
-    this.form = document.querySelector('#form');
-
-
-
-    // EventListener
-    this.signOutButton.addEventListener('click', this.signOut.bind(this));
-    this.signInGoogleButton.addEventListener('click', this.signInGoogle.bind(this));
-    this.createArticleButton.addEventListener('click', this.createArticle.bind(this));
-
+function AppMobile() {
     this.initFirebase();
-  }
+}
+
+window.onload = function() {
+    window.appMobile = new AppMobile();
+};
 
 // Sets up shortcuts to Firebase features and initiate firebase auth.
 AppMobile.prototype.initFirebase = function() {     // syntaxe méthode
@@ -27,30 +17,8 @@ AppMobile.prototype.initFirebase = function() {     // syntaxe méthode
     this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
 };
 
-// Triggers when the auth state change
-AppMobile.prototype.onAuthStateChanged = function(user) {
-    if (user) {
-        document.getElementById('message').html = user;
-        console.log(user);
-        // change CSS btn
-        this.signOutButton.removeAttribute('hidden');
-        this.signInGoogleButton.setAttribute('hidden', 'true');
-
-        // Action
-        this.loadArticles(); // cf getData.js
-
-    } else {
-        // TODO action pour revenir accueil et enlever toutes les données à l'écran
-        document.getElementById('message').html = "log out";
-        console.log("log out");
-        this.signOutButton.setAttribute('hidden', 'true');
-        this.signInGoogleButton.removeAttribute('hidden');
-    }
-};
-
 // Sign in Firebase using popup auth and Google as the identity provider.
 AppMobile.prototype.signInGoogle = function() {
-    console.log('log in');
     var provider = new firebase.auth.GoogleAuthProvider();
 
     firebase.auth().signInWithRedirect(provider).then(function() {
@@ -60,16 +28,48 @@ AppMobile.prototype.signInGoogle = function() {
         var errorCode = error.code;
         var errorMessage = error.message;
       });
-
-    //this.auth.signInWithPopup(provider);
 };
 
 // Sign out of Firebase.
 AppMobile.prototype.signOut = function() {
-    console.log('log out');
     this.auth.signOut();
 };
 
-window.onload = function() {
-    window.appMobile = new AppMobile();
-  };
+// Triggers when the auth state change
+AppMobile.prototype.onAuthStateChanged = function(user) {
+    if (user) {
+        var app = document.getElementById('app');
+        app.className = "connected";
+ 
+        var header = '<header class="container-header">HEADER<button hidden id="sign-out">Sign-out</button></header>';
+
+        var contentStart = '<div class="discover">';
+        var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
+        var contentArticle = '<div class="container-all-articles clearfix"><h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2><div id="wrap-articles"></div></div>';
+        var contentEnd = '</div>';
+
+        app.innerHTML = header + contentStart + contentForm + contentArticle + contentEnd;
+        
+         // Shortcuts to DOM Elements.
+        this.articleList = document.getElementById('wrap-articles');
+        this.signOutButton = document.querySelector('#sign-out');
+        this.createArticleButton = document.querySelector('.container-add-article .onglet-add');
+        this.form = document.querySelector('.container-add-article');
+
+        // EventListener
+        this.signOutButton.addEventListener('click', this.signOut.bind(this));
+        this.createArticleButton.addEventListener('click', this.createFormArticle.bind(this));
+
+        // Action
+        this.loadArticles(); // cf getData.js
+        
+    } else {
+        // not connected
+        var app = document.getElementById('app');
+        app.className = "notConnected";
+        app.innerHTML = '<button class="signIn" id="sign-in-google">Connexion avec G+</button><div class="connected-border"></div>';
+
+        document.querySelector('#sign-in-google').addEventListener('click', this.signInGoogle.bind(this));
+    }
+};
+
