@@ -48,16 +48,7 @@ AppMobile.prototype.loadAutocomplete = function(){
                     input.style.fontSize= "20px";
                     input.style.paddingLeft= "10px";
                 });
-
-                this.loadArticles('paris'); 
-                //1current.addEventListener('click', this.cityRequest.bind(this));
             }
         }
     }
-}
-
-AppMobile.prototype.cityRequest = function(){
-    console.log('change')
-    var city = document.getElementById('search-bar').value;
-     
 }

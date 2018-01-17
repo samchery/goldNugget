@@ -101,10 +101,12 @@ AppMobile.prototype.showTouristSection = function(){
     app.innerHTML = header + contentStart + contentFiltre + contentEnd;
 
     // filtre
-    this.filtre = document.querySelector('.container-filtre');
+    this.filtre = document.querySelector('.text-filtre');
     this.filtre.addEventListener('click', this.createFiltreArticle.bind(this));
 
     this.loadAutocomplete();
+
+    // en dur
     this.loadArticles('marseille'); 
 
     // ACTION CHANGE SECTION

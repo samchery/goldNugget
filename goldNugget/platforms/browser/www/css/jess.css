@@ -95,3 +95,7 @@ color: #000; }
 .list-filter:last-child {
   padding-bottom: 40px;
 }
+
+.list-filter li:hover{
+  cursor:pointer;
+}

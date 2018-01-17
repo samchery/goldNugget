@@ -14,6 +14,27 @@ AppMobile.prototype.loadArticles = function(city) {
     this.articlesRef.limitToLast(12).on('child_changed', setArticle);
 };
 
+
+AppMobile.prototype.loadArticlesByCat = function(city, category) {
+    this.articlesRef = this.database.ref('articles').orderByChild("ville").equalTo(city); // recup données de BDD
+    // Make sure we remove all previous listeners.
+    this.articlesRef.off(); //remove previous listener
+
+    // Loads the last 12 articles
+    var setArticle = function(data) { // dans articlesRef
+        var val = data.val();
+        console.log(val.category);
+        if(val.category == category){
+            console.log('oui');
+            this.displayArticle(data.key, val.title, val.description, val.address, val.category, val.img);
+        }
+    }.bind(this);   
+
+    this.articlesRef.limitToLast(12).on('child_added', setArticle); // tant que pas 12, on rajoute dans setArticle
+    this.articlesRef.limitToLast(12).on('child_changed', setArticle);
+};
+
+
 // Display an Article in the UI.
 AppMobile.prototype.displayArticle = function(key, title, description, address, category, img) {
     var div = document.getElementById(key);
