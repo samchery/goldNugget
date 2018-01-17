@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=500, initial-scale=1">
         <title>App Mobile</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="styles/css/style.css">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
     </head>
     <body>
@@ -24,7 +25,7 @@
             </ul>
         </header>
         <!-- DEBUT de la partie "faire explorer" -->
-        <main class="discover">
+        <main class="discover" style="display:none;">
             <div class="container-add-article">
                 <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
                 <div class="add-article">
@@ -81,7 +82,7 @@
         <!-- FIN de la partie "faire explorer" -->
         <!-- rmq: Dans le header, la classe active switchera sur le li "visiter" -->
         <!-- DEBUT de la partie "visiter" -->
-        <main class="visit" style="display:none;">
+        <main class="visit">
             <div class="container-all-articles">
                 <h2>Profitez des trouvailles de la ville de <span class="choose-city">Paris</span></h2>
                 <p>Je visite <input type="text" name="" value="Paris">,</p>
