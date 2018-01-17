@@ -41,7 +41,9 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
         var app = document.getElementById('app');
         app.className = "inspire";
  
-        var header = '<header class="container-header">HEADER<button hidden id="sign-out">Sign-out</button></header>';
+        var header = '<header class="container-header"><img class="link-logo" src="img/logoapp.png" alt="logo">';
+        header += '<nav><ul><li><a href="#" class="active">Faire découvrir</a></li><li><a href="#">Visiter</a></li></ul></nav>';
+        header += '<button hidden id="sign-out">Sign-out</button></header>';
 
         var contentStart = '<div class="discover">';
         var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
