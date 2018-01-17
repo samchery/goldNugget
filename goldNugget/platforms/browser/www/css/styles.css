@@ -1,29 +1,4 @@
-* {
-    margin: 0 auto;
-    padding: 0;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-.clearfix:before,
-.clearfix:after {	
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear:both;
-}
-
-body {
-    font-family: 'Raleway', sans-serif !important;
-    font-size: 16px;
-    background-size: cover;
-}
+/* SAM */
 
 .notConnected{
     position: relative;
@@ -33,6 +8,7 @@ body {
     background-size: cover;
     background-position: center;
 }
+
 .signIn{
     position: absolute;
     width: 80%;
@@ -40,10 +16,11 @@ body {
     right: 50%;
     transform: translate(50%, -50%);
     font-family: 'Raleway', sans-serif;
-    font-size: 80px;
+    font-size: 45px;
     color: #FFF;
     cursor: pointer;
 }
+
 .connected-border{
     position: absolute;
     top: 54%;
@@ -57,82 +34,3 @@ body {
 .connected{
     background: beige;
 }
-
-
-/* STYLE MEL */
-
-.wrap-articles {
-    position: relative;
-    width: 100%;
-    height: 185px;
-    padding: 10px 0 10px 12px;
-    margin-bottom: 25px;
-    background: #fff;
-    color: #4a4a4a;
-    border-radius: 6px; }
-    .wrap-articles .article-detail {
-      float: left; }
-      .wrap-articles .article-detail h3 {
-        display: block;
-        font-size: 24px; }
-      .wrap-articles .article-detail .info-city {
-        width: 215px;
-        font-size: 16px !important;
-        padding: 14px 9px 0 0;
-        font-weight: 200; }
-  
-  .container-address {
-    position: relative; }
-    .container-address .street-address {
-      position: absolute;
-      bottom: -30px;
-      font-size: 14px;
-      font-weight: 100; }
-  
-  .img-article-detail {
-    position: absolute;
-    right: 0;
-    width: 110px;
-    height: 100%;
-    padding: 0;
-    top: 0;
-    overflow: hidden;
-    border-radius: 0 6px 6px 0; }
-    .img-article-detail img {
-      position: absolute;
-      left: -30px;
-      width: 250%;
-      height: 185px; }
-  
-  .container-advice {
-    width: 100%;
-    color: #fff; }
-    .container-advice .approve {
-      position: absolute;
-      bottom: -15px;
-      right: 72px;
-      width: 85px;
-      height: 33px;
-      border-radius: 3px;
-      background-image: linear-gradient(124deg, #00a6ff, #00fffa);
-      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25); }
-      .container-advice .approve p {
-        font-size: 12px;
-        text-align: center;
-        padding: 9px 0; }
-    .container-advice .dislike {
-      position: absolute;
-      bottom: -15px;
-      right: 22px;
-      width: 43px;
-      height: 33px;
-      border-radius: 3px;
-      background-image: linear-gradient(128deg, #ffa751, #ffe259);
-      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25); }
-      .container-advice .dislike img {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -40%);
-        width: 26px; }
-

@@ -35,55 +35,49 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
 };
 
 // Display form
-AppMobile.prototype.createArticle = function() {
-      var form = document.createElement('form');
-      form.innerHTML = '<label class=""> Le nom de votre perle</label>';
-      form.innerHTML += '<input type="text" name="title" value="" class="form-title"/>';
-      form.innerHTML += '<label class=""> Décrivez votre perle</label>';
-      form.innerHTML += '<textarea class="form-content" name="describe" rows="8" cols="80"></textarea>';
-      form.innerHTML += '<label class=""> L\'adresse de votre perle</label>';
-      form.innerHTML += '<input type="text" name="adress" class="form-adress" value=""/>';
-      form.innerHTML += '<input id="img" type="file" class="form-image"/>';
-      form.innerHTML += '<button type="button" name="button" class="form-button"/>OK</button>';
+AppMobile.prototype.createFormArticle = function() {
+    if(null == document.querySelector('.container-add-article form')){
+        var form = document.createElement('form');
+        form.innerHTML = '<label class=""> Le nom de votre perle</label>';
+        form.innerHTML += '<input required="required" type="text" name="title" value="" class="form-title"/>';
+        form.innerHTML += '<label class=""> Décrivez votre perle</label>';
+        form.innerHTML += '<textarea required="required" class="form-content" name="describe" rows="8" cols="80"></textarea>';
+        form.innerHTML += '<label class=""> L\'adresse de votre perle</label>';
+        form.innerHTML += '<input required="required" type="text" name="adress" class="form-adress" value=""/>';
+        form.innerHTML += '<input required="required" id="img" type="file" class="form-image"/>';
+        form.innerHTML += '<button type="submit" name="button" class="form-button"/>OK</button>';
 
-      this.form.appendChild(form);
-      this.addArticleButton = document.querySelector('#form .form-button');
-      this.addArticleButton.addEventListener('click', this.addArticle.bind(this));
+        this.form.appendChild(form);
+
+        this.addArticleButton = document.querySelector('.container-add-article .form-button');
+        this.addArticleButton.addEventListener('click', this.addArticle.bind(this));
+        
+    } else{
+        document.querySelector('#form form').remove();
+        
+    }
 };
 
-//
-AppMobile.prototype.upload = function(){
-
-    console.log(selectedFile);
-
-
-
-}
 
 // Get created article in data
 AppMobile.prototype.addArticle = function() {
-    if(form){
-        console.log('y a')
-        var title = document.querySelector('.form-title').value;
-        var content = document.querySelector('.form-content').value;
-        var address = document.querySelector('.form-adress').value;
-        var selectedFile = document.getElementById('img').files[0];
+   
+    var title = document.querySelector('.form-title').value;
+    var content = document.querySelector('.form-content').value;
+    var address = document.querySelector('.form-adress').value;
+    var selectedFile = document.getElementById('img').files[0];
 
-        if('undefined' != selectedFile){
-            var storageRef = firebase.storage().ref(selectedFile.name);
-            storageRef.put(selectedFile).then(function(snapshot) {
-                if (title != "" && content !="" && address !=""){
-                    var newArticleId = firebase.database().ref().child('articles').push().key;
-                    firebase.database().ref('articles/' + newArticleId).set({
-                        title: title,
-                        description: content,
-                        address : address,
-                        img: selectedFile.name
-                    });
-                }
+    var storageRef = firebase.storage().ref(selectedFile.name);
+    storageRef.put(selectedFile).then(function(snapshot) {
+        if (title != "" && content !="" && address !=""){
+            var newArticleId = firebase.database().ref().child('articles').push().key;
+            firebase.database().ref('articles/' + newArticleId).set({
+                title: title,
+                description: content,
+                address : address,
+                img: selectedFile.name
             });
         }
+    });
 
-
-    }
 };

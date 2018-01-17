@@ -40,19 +40,25 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
     if (user) {
         var app = document.getElementById('app');
         app.className = "connected";
+ 
+        var header = '<header class="container-header">HEADER<button hidden id="sign-out">Sign-out</button></header>';
 
-        app.innerHTML = '<button hidden id="sign-out">Sign-out</button><div id="wrap-articles"></div>';
-        app.innerHTML += '<div id="form"><button class="access">Form</button></div>';
+        var contentStart = '<div class="discover">';
+        var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
+        var contentArticle = '<div class="container-all-articles clearfix"><h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2><div id="wrap-articles"></div></div>';
+        var contentEnd = '</div>';
+
+        app.innerHTML = header + contentStart + contentForm + contentArticle + contentEnd;
         
          // Shortcuts to DOM Elements.
         this.articleList = document.getElementById('wrap-articles');
         this.signOutButton = document.querySelector('#sign-out');
-        this.createArticleButton = document.querySelector('#form .access');
-        this.form = document.querySelector('#form');
+        this.createArticleButton = document.querySelector('.container-add-article .onglet-add');
+        this.form = document.querySelector('.container-add-article');
 
         // EventListener
         this.signOutButton.addEventListener('click', this.signOut.bind(this));
-        this.createArticleButton.addEventListener('click', this.createArticle.bind(this));
+        this.createArticleButton.addEventListener('click', this.createFormArticle.bind(this));
 
         // Action
         this.loadArticles(); // cf getData.js
@@ -61,7 +67,7 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
         // not connected
         var app = document.getElementById('app');
         app.className = "notConnected";
-        app.innerHTML = '<button class="signIn" id="sign-in-google">Se connecter avec G+</button><div class="connected-border"></div>';
+        app.innerHTML = '<button class="signIn" id="sign-in-google">Connexion avec G+</button><div class="connected-border"></div>';
 
         document.querySelector('#sign-in-google').addEventListener('click', this.signInGoogle.bind(this));
     }
