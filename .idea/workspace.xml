@@ -20,16 +20,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/outputs/apk/debug/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/generated/source/buildConfig/debug/io/cordova/hellocordova/BuildConfig.java" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/generated/source/buildConfig/debug/io/cordova/hellocordova/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/css/mel.css" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/css/mel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/js/filtre.js" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/js/filtre.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/js/main.js" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/css/jess.css" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/assets/debug/www/css/jess.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/css/mel.css" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/css/mel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/js/filtre.js" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/js/filtre.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/js/main.js" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/browser/www/css/mel.css" afterPath="$PROJECT_DIR$/goldNugget/platforms/browser/www/css/mel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/www/css/mel.css" afterPath="$PROJECT_DIR$/goldNugget/www/css/mel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/css/jess.css" afterPath="$PROJECT_DIR$/goldNugget/platforms/android/app/src/main/assets/www/css/jess.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/platforms/browser/www/css/jess.css" afterPath="$PROJECT_DIR$/goldNugget/platforms/browser/www/css/jess.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goldNugget/www/css/jess.css" afterPath="$PROJECT_DIR$/goldNugget/www/css/jess.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
