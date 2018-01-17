@@ -54,9 +54,7 @@ main {
 
 .discover {
   width: 100%;
-  color: #fff;
-  height: 100vh;
-  position: relative; }
+  color: #fff; }
   .discover .container-all-articles {
     padding: 0 15px;
     width: 100%;
@@ -156,7 +154,7 @@ main {
       width: 26px; }
 
 .container-add-article {
-  position: absolute;
+  position: fixed;
   right: 0;
   left: 0;
   bottom: 0;
