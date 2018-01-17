@@ -1,18 +1,23 @@
-function AppMobile() {
+function AppMobile() {  // syntaxe class
     // Shortcuts to DOM Elements.
-    this.articleList = document.getElementById('wrap-article');
+    this.articleList = document.getElementById('wrap-article'); // syntaxe propriétés
     this.signInGoogleButton = document.querySelector('#sign-in-google');
     this.signOutButton = document.querySelector('#sign-out');
+    this.createArticleButton = document.querySelector('#form .access');
+    this.form = document.querySelector('#form');
+
+
 
     // EventListener
     this.signOutButton.addEventListener('click', this.signOut.bind(this));
     this.signInGoogleButton.addEventListener('click', this.signInGoogle.bind(this));
+    this.createArticleButton.addEventListener('click', this.createArticle.bind(this));
 
     this.initFirebase();
   }
 
 // Sets up shortcuts to Firebase features and initiate firebase auth.
-AppMobile.prototype.initFirebase = function() {
+AppMobile.prototype.initFirebase = function() {     // syntaxe méthode
     // Shortcuts to Firebase SDK features.
     this.auth = firebase.auth();
     this.database = firebase.database();
@@ -32,9 +37,10 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
         this.signInGoogleButton.setAttribute('hidden', 'true');
 
         // Action
-        this.loadArticles();
-  
+        this.loadArticles(); // cf getData.js
+
     } else {
+        // TODO action pour revenir accueil et enlever toutes les données à l'écran
         document.getElementById('message').html = "log out";
         console.log("log out");
         this.signOutButton.setAttribute('hidden', 'true');
