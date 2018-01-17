@@ -39,29 +39,13 @@ AppMobile.prototype.signOut = function() {
 AppMobile.prototype.onAuthStateChanged = function(user) {
     if (user) {
         var app = document.getElementById('app');
-        var btn =  document.createElement('button');
-        btn.setAttribute('id', 'sign-out');
-        var text = document.createTextNode("Sign-out"); 
-        btn.appendChild(text);
-        app.appendChild(btn);
+        app.className = "connected";
 
-        console.log(user);
-     
-
-        /*
-         <button hidden id="sign-out">
-                    Sign-out
-                </button>
-            <div id="wrap-article"></div>
-            <div id="message">ici</div>
-            <div id="form">
-                <button class="access">
-                    Form
-                </button>
-            </div>
+        app.innerHTML = '<button hidden id="sign-out">Sign-out</button><div id="wrap-articles"></div>';
+        app.innerHTML += '<div id="form"><button class="access">Form</button></div>';
         
          // Shortcuts to DOM Elements.
-        this.articleList = document.getElementById('wrap-article'); // syntaxe propriétés
+        this.articleList = document.getElementById('wrap-articles');
         this.signOutButton = document.querySelector('#sign-out');
         this.createArticleButton = document.querySelector('#form .access');
         this.form = document.querySelector('#form');
@@ -72,12 +56,12 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
 
         // Action
         this.loadArticles(); // cf getData.js
-        */
+        
     } else {
         // not connected
         var app = document.getElementById('app');
         app.className = "notConnected";
-        app.innerHTML = '<button id="sign-in-google">Connection via google</button>';
+        app.innerHTML = '<button class="signIn" id="sign-in-google">Se connecter avec G+</button><div class="connected-border"></div>';
 
         document.querySelector('#sign-in-google').addEventListener('click', this.signInGoogle.bind(this));
     }

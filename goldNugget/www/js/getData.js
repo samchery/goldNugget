@@ -1,5 +1,4 @@
 AppMobile.prototype.loadArticles = function() {
-    console.log('article');
     this.articlesRef = this.database.ref('articles'); // recup données de BDD
     // Make sure we remove all previous listeners.
     this.articlesRef.off(); //remove previous listener
@@ -21,14 +20,14 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
     // If an element for that article does not exists yet we create it.
     if (!div) {
         var container = document.createElement('div');
-        container.innerHTML = '<p class="message-container"><h3>' + title + '</h3>';
-        container.innerHTML += '<h4>' + address + '</h4><img id="img_' +  key + '" src="" />';
-        container.innerHTML += '<span>' + category + '</span><p>' + description + '</p>';
+        container.className = "wrap-articles clearfix";
+        container.innerHTML = '<div class="article-detail"><h3>' + title + '</h3><p class="info-city">' + description + '</p><div class="container-address"><p class="street-address">' + address + '</p></div></div>';
+        container.innerHTML += '<div class="article-detail"><div class="img-article-detail"><img id="img_' +  key + '" src="" /></div><div class="container-advice"><div class="approve"><p>J\'approuve</p></div><div class="dislike"><img src="img/dislike.svg" alt="dislike image"></div></div></div>';
+
         container.setAttribute('id', key);
         this.articleList.appendChild(container);
 
         firebase.storage().ref(img).getDownloadURL().then(function(url) {
-          console.log(url);
           var img = document.getElementById('img_' + key);
           img.src = url;
         });
