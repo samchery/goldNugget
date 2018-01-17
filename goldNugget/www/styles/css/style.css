@@ -1,47 +1,198 @@
-/*
-Error: Invalid CSS after "...artials/header"": expected "{", was ";"
-        on line 4 of scss/style.scss
+* {
+  margin: 0 auto;
+  padding: 0; }
 
-1: @import "partials/reset";
-2: @import "partials/global";
-3: <<<<<<< HEAD
-4: @import "partials/header";
-5: @import "partials/inspirer";
-6: @import "partials/ajouter";
-7: =======
-8: @import "partials/inspirer";
-9: >>>>>>> f9734586c10b44d820828b7043f6a7452aed5d8a
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
 
-Backtrace:
-scss/style.scss:4
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1278:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1208:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1203:in `tok!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:677:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:670:in `ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:696:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:689:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...artials/header\"\": expected \"{\", was \";\"\A         on line 4 of scss/style.scss\A \A 1: @import \"partials/reset\";\A 2: @import \"partials/global\";\A 3: <<<<<<< HEAD\A 4: @import \"partials/header\";\A 5: @import \"partials/inspirer\";\A 6: @import \"partials/ajouter\";\A 7: =======\A 8: @import \"partials/inspirer\";\A 9: >>>>>>> f9734586c10b44d820828b7043f6a7452aed5d8a"; }
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+body {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 16px;
+  background-image: url("../../images/fond1.jpg");
+  background-size: cover; }
+
+.container-header {
+  background: red;
+  display: flex;
+  align-items: center; }
+
+.link-logo {
+  display: inline-block; }
+  .link-logo .logo-header {
+    width: 46px;
+    height: 43px; }
+
+.nav-header {
+  display: inline-block; }
+  .nav-header .container-links-nav {
+    list-style: none; }
+    .nav-header .container-links-nav .list-links-nav {
+      display: inline-block; }
+
+.discover {
+  width: 100%;
+  padding: 15px;
+  color: #fff; }
+  .discover .container-all-articles {
+    position: relative; }
+    .discover .container-all-articles h2 {
+      width: 345px;
+      height: 60px;
+      font-family: Raleway;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center; }
+
+.info-goldn {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 13px;
+  font-size: 16px !important; }
+
+.choose-city {
+  font-weight: 300; }
+
+.wrap-articles {
+  position: relative;
+  width: 100%;
+  height: 185px;
+  padding: 10px 0 10px 12px;
+  margin-bottom: 25px;
+  background: #fff;
+  color: #4a4a4a;
+  border-radius: 6px; }
+  .wrap-articles .article-detail {
+    float: left; }
+    .wrap-articles .article-detail h3 {
+      display: block;
+      font-size: 24px; }
+    .wrap-articles .article-detail .info-city {
+      width: 215px;
+      font-size: 16px !important;
+      padding: 14px 9px 0 0;
+      font-weight: 200; }
+
+.container-address {
+  position: relative; }
+  .container-address .street-address {
+    position: absolute;
+    bottom: -30px;
+    font-size: 14px;
+    font-weight: 100; }
+
+.img-article-detail {
+  position: absolute;
+  right: 0;
+  width: 110px;
+  height: 100%;
+  padding: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 0 6px 6px 0; }
+  .img-article-detail img {
+    position: absolute;
+    left: -30px;
+    width: 250%;
+    height: 185px; }
+
+.container-advice {
+  width: 100%;
+  color: #fff; }
+  .container-advice .approve {
+    position: absolute;
+    bottom: -15px;
+    right: 72px;
+    width: 85px;
+    height: 33px;
+    border-radius: 3px;
+    background-image: linear-gradient(124deg, #00a6ff, #00fffa);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25); }
+    .container-advice .approve p {
+      font-size: 12px;
+      text-align: center;
+      padding: 9px 0; }
+  .container-advice .dislike {
+    position: absolute;
+    bottom: -15px;
+    right: 22px;
+    width: 43px;
+    height: 33px;
+    border-radius: 3px;
+    background-image: linear-gradient(128deg, #ffa751, #ffe259);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25); }
+    .container-advice .dislike img {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -40%);
+      width: 26px; }
+
+.container-add-article {
+  width: 100%;
+  background-color: #fff; }
+
+.onglet-add {
+  height: 90px;
+  position: relative; }
+  .onglet-add .text-add {
+    font-size: 25px;
+    color: #00A7FF;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.add-article {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.label-form {
+  width: 100%;
+  display: block;
+  color: #00A7FF;
+  font-size: 22px;
+  font-weight: lighter; }
+
+.input-form, .form-content {
+  width: 100%;
+  border: 1px solid #E0E0E0;
+  border-radius: 17px;
+  color: #9B9B9B;
+  font-size: 22px;
+  padding: 0px 2px 4px 17px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  outline: none; }
+
+.title-input-add {
+  width: 80%; }
+
+.button-image, .button-add-article {
+  display: block;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 22px;
+  color: #00A7FF;
+  border: 1px solid #fff !important;
+  background: #fff; }
+
+.button-add-article {
+  padding: 20px 0 10px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */
