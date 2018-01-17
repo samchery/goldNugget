@@ -54,7 +54,6 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
 };
 
 AppMobile.prototype.showMySection = function(){
-    console.log('my');
     var app = document.getElementById('app');
     app.className = "inspire";
 
@@ -70,7 +69,6 @@ AppMobile.prototype.showMySection = function(){
     app.innerHTML = header + contentStart + contentForm + contentArticle + contentEnd;
     
         // Shortcuts to DOM Elements.
-    this.articleList = document.getElementById('wrap-articles');
     this.signOutButton = document.querySelector('#sign-out');
     this.createArticleButton = document.querySelector('.container-add-article .onglet-add');
     this.form = document.querySelector('.container-add-article');
@@ -84,11 +82,10 @@ AppMobile.prototype.showMySection = function(){
     this.discoverButton.addEventListener('click', this.showTouristSection.bind(this));
 
     // Action
-    this.loadArticles(); 
+    this.loadArticles('Paris'); 
 }
 
 AppMobile.prototype.showTouristSection = function(){
-    console.log('tourist');
     var app = document.getElementById('app');
     app.className = "explore";
 
@@ -99,7 +96,7 @@ AppMobile.prototype.showTouristSection = function(){
     var contentStart = '<div class="explore">';
     var contentFiltre = '<div class="container-filtre"><div class="onglet-filtre"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-filtre">Filtrer</p></div></div>';
     var contentArticle = '<div class="container-all-articles clearfix"><h2>Vous aussi, profitez des perles de la ville de <span class="choose-city">Paris</span></h2><div id="wrap-infos-explorer">';
-    var contentEnd = '<div class="wrapper-info-explorer"><p class="info-goldn-explorer">Je visite</p><input type="text" name="city-name" class="city-name"><p class="info-goldn-explorer">,<br>  je veux découvrir ses charmes !</p></div><div id="wrap-articles clearfix"></div></div></div></div>';
+    var contentEnd = '<div class="wrapper-info-explorer"><p class="info-goldn-explorer">Je visite</p><input type="text" name="city-name" class="city-name" id="search-bar"><ul class="results-autocomplete"></ul><p class="info-goldn-explorer">,<br>  je veux découvrir ses charmes !</p></div><div id="wrap-articles"></div></div></div></div>';
 
     app.innerHTML = header + contentStart + contentFiltre + contentEnd;
 
@@ -107,7 +104,21 @@ AppMobile.prototype.showTouristSection = function(){
     this.filtre = document.querySelector('.container-filtre');
     this.filtre.addEventListener('click', this.createFiltreArticle.bind(this));
 
+    this.loadAutocomplete();
+
+    this.cityRequestInput = document.getElementById('search-bar');
+    this.cityRequestInput.addEventListener('change', this.cityRequest.bind(this));
+
+        
     // ACTION CHANGE SECTION
     this.inspireButton = document.getElementById('inspire');
     this.inspireButton.addEventListener('click', this.showMySection.bind(this));
+}
+
+AppMobile.prototype.cityRequest = function(){
+    var city = document.getElementById('search-bar').value;
+    console.log('ic');
+    console.log(city[0].toUpperCase() + city.slice(1));
+
+    this.loadArticles(city); 
 }

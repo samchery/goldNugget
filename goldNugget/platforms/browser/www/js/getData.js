@@ -1,12 +1,13 @@
-AppMobile.prototype.loadArticles = function() {
-    this.articlesRef = this.database.ref('articles'); // recup données de BDD
+AppMobile.prototype.loadArticles = function(btn, city) {
+    console.log(city);
+    this.articlesRef = this.database.ref('articles').orderByChild("ville").equalTo(city); // recup données de BDD
     // Make sure we remove all previous listeners.
     this.articlesRef.off(); //remove previous listener
 
     // Loads the last 12 articles
     var setArticle = function(data) { // dans articlesRef
         var val = data.val();
-        this.displayArticle(data.key, val.title, val.description, val.address, val.category, val.img);
+        this.displayArticle(btn, data.key, val.title, val.description, val.address, val.category, val.img);
     }.bind(this);
 
     this.articlesRef.limitToLast(12).on('child_added', setArticle); // tant que pas 12, on rajoute dans setArticle
@@ -14,7 +15,7 @@ AppMobile.prototype.loadArticles = function() {
 };
 
 // Display an Article in the UI.
-AppMobile.prototype.displayArticle = function(key, title, description, address, category, img) {
+AppMobile.prototype.displayArticle = function(btn, key, title, description, address, category, img) {
     var div = document.getElementById(key);
 
     // If an element for that article does not exists yet we create it.
@@ -23,9 +24,13 @@ AppMobile.prototype.displayArticle = function(key, title, description, address, 
         container.className = "wrap-articles clearfix";
         container.innerHTML = '<div class="article-detail"><h3>' + title + '</h3><p class="info-city">' + description + '</p><div class="container-address"><p class="street-address">' + address + '</p></div></div>';
         container.innerHTML += '<div class="article-detail"><div class="img-article-detail"><img id="img_' +  key + '" src="" /></div><div class="container-advice"><div class="approve"><p>J\'approuve</p></div><div class="dislike"><img src="img/dislike.svg" alt="dislike image"></div></div>';
-
         container.setAttribute('id', key);
-        this.articleList.appendChild(container);
+
+        var articleList = document.getElementById('wrap-articles');
+        articleList.appendChild(container);
+
+        console.log(document.getElementById('wrap-articles'));
+        console.log(container);
 
         firebase.storage().ref(img).getDownloadURL().then(function(url) {
           var img = document.getElementById('img_' + key);
