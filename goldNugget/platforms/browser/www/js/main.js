@@ -38,32 +38,10 @@ AppMobile.prototype.signOut = function() {
 // Triggers when the auth state change
 AppMobile.prototype.onAuthStateChanged = function(user) {
     if (user) {
-        var app = document.getElementById('app');
-        app.className = "inspire";
- 
-        var header = '<header class="container-header"><img class="link-logo" src="img/logoapp.png" alt="logo">';
-        header += '<nav><ul><li><a href="#" class="active">Faire découvrir</a></li><li><a href="#">Visiter</a></li></ul></nav>';
-        header += '<button hidden id="sign-out">Sign-out</button></header>';
-
-        var contentStart = '<div class="discover">';
-        var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
-        var contentArticle = '<div class="container-all-articles clearfix"><h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2><div id="wrap-articles"></div></div>';
-        var contentEnd = '</div>';
-
-        app.innerHTML = header + contentStart + contentForm + contentArticle + contentEnd;
         
-         // Shortcuts to DOM Elements.
-        this.articleList = document.getElementById('wrap-articles');
-        this.signOutButton = document.querySelector('#sign-out');
-        this.createArticleButton = document.querySelector('.container-add-article .onglet-add');
-        this.form = document.querySelector('.container-add-article');
+        // par default
 
-        // EventListener
-        this.signOutButton.addEventListener('click', this.signOut.bind(this));
-        this.createArticleButton.addEventListener('click', this.createFormArticle.bind(this));
-
-        // Action
-        this.loadArticles(); // cf getData.js
+        this.showMySection();
         
     } else {
         // not connected
@@ -75,3 +53,57 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
     }
 };
 
+AppMobile.prototype.showMySection = function(){
+    console.log('my');
+    var app = document.getElementById('app');
+    app.className = "inspire";
+
+    var header = '<header class="container-header"><img class="link-logo" src="img/logoapp.png" alt="logo">';
+    header += '<div id="inspire" class="active">Partager</div><div id="discover">Explorer</div>';
+    header += '<button hidden id="sign-out">Sign-out</button></header>';
+
+    var contentStart = '<div class="discover">';
+    var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
+    var contentArticle = '<div class="container-all-articles clearfix"><h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2><p class="info-goldn">J\'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d\'autres habitants de <span class="choose-city">Tokyo</span>, j\’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p><div id="wrap-articles"></div></div>';
+    var contentEnd = '</div>';
+
+    app.innerHTML = header + contentStart + contentForm + contentArticle + contentEnd;
+    
+        // Shortcuts to DOM Elements.
+    this.articleList = document.getElementById('wrap-articles');
+    this.signOutButton = document.querySelector('#sign-out');
+    this.createArticleButton = document.querySelector('.container-add-article .onglet-add');
+    this.form = document.querySelector('.container-add-article');
+
+    // EventListener
+    this.signOutButton.addEventListener('click', this.signOut.bind(this));
+    this.createArticleButton.addEventListener('click', this.createFormArticle.bind(this));
+
+    // ACTION CHANGE SECTION
+    this.discoverButton = document.getElementById('discover');
+    this.discoverButton.addEventListener('click', this.showTouristSection.bind(this));
+
+    // Action
+    this.loadArticles(); 
+}
+
+AppMobile.prototype.showTouristSection = function(){
+    console.log('tourist');
+    var app = document.getElementById('app');
+    app.className = "explore";
+
+    var header = '<header class="container-header"><img class="link-logo" src="img/logoapp.png" alt="logo">';
+    header += '<div id="inspire">Partager</div><div id="discover" class="active">Explorer</div>';
+    header += '<button hidden id="sign-out">Sign-out</button></header>';
+
+    var contentStart = '<div class="explore">';
+    var contentFiltre = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Filtrer</p></div></div>';
+    var contentArticle = '<div class="container-all-articles clearfix"><h2>Vous aussi, profitez des perles de la ville de <span class="choose-city">Paris</span></h2><div id="wrap-infos-explorer">';
+    var contentEnd = '<div class="wrapper-info-explorer"><p class="info-goldn-explorer">Je visite</p><input type="text" name="city-name" class="city-name"><p class="info-goldn-explorer">,<br>  je veux découvrir ses charmes !</p></div><div id="wrap-articles clearfix"></div></div></div></div>';
+
+    app.innerHTML = header + contentStart + contentFiltre + contentEnd;
+
+    // ACTION CHANGE SECTION
+    this.inspireButton = document.getElementById('inspire');
+    this.inspireButton.addEventListener('click', this.showMySection.bind(this));
+}

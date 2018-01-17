@@ -47,10 +47,10 @@ AppMobile.prototype.createFormArticle = function() {
         form.innerHTML += '<label class="label-form">L\'adresse de votre perle</label>';
         form.innerHTML += '<input required="required" type="text" class="form-adress input-form" value=""/>';
         form.innerHTML += '<input required="required" id="img" type="file" class="form-image"/>';
+        form.innerHTML += '<label class="label-form">Sélectionner une catégorie</label>';
+        form.innerHTML += '<select class="select-form"><option value="Culture">Culture</option><option value="Prommenade">Prommenade</option><option value="Restaurant">Restaurant</option></select>';
         form.innerHTML += '<button type="button" class="form-button button-add-article"/>OK</button>';
-
         this.form.appendChild(form);
-
         this.addArticleButton = document.querySelector('.container-add-article .form-button');
         this.addArticleButton.addEventListener('click', this.addArticle.bind(this));
         
