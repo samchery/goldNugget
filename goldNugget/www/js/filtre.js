@@ -3,7 +3,7 @@ AppMobile.prototype.createFiltreArticle = function() {
     if(null == document.querySelector('#filtre')){
         var filtre = document.createElement('div');
         filtre.setAttribute('id', '#filtre');
-        filtre.innerHTML = 'ici ul li ce que tu veux';
+        filtre.innerHTML = '<ul class="filter-container"><li class="list-filter">Restaurant</li><li class="list-filter">Promenade</li><li class="list-filter">Culture</li></ul>';
         this.filtre.appendChild(filtre);
         
     } else{

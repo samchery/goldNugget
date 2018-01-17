@@ -12,14 +12,16 @@
   height: 43px; 
 }
 
-#inspire, #discover{
+.inspire, .discover{
   display: inline-block; 
   font-weight: 200;
   color: #fff;
   font-size: 18px;
 }
 
-#active{
+.active{
+  border-bottom: 2px solid #fff;
+  padding: 5px 0;
   font-weight: 700;
   font-size: 24px;
 }

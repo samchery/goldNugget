@@ -64,7 +64,7 @@ AppMobile.prototype.showMySection = function(){
 
     var contentStart = '<div class="discover">';
     var contentForm = '<div class="container-add-article"><div class="onglet-add"><img src="img/bouton.png" alt="bouton image d\'ajout" class="image-add" /><p class="text-add">Ajouter</p></div></div>';
-    var contentArticle = '<div class="container-all-articles clearfix"><h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2><p class="info-goldn">J\'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d\'autres habitants de <span class="choose-city">Tokyo</span>, j\’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p><div id="wrap-articles"></div></div>';
+    var contentArticle = '<div class="container-all-articles clearfix"><h2>Révélez vos idées ... de la ville de <span class="choose-city">Paris</span></h2><p class="info-goldn">J\'habite <span class="choose-city">Paris</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d\'autres habitants de <span class="choose-city">Paris</span>, j\’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p><div id="wrap-articles"></div></div>';
     var contentEnd = '</div>';
 
     app.innerHTML = header + contentStart + contentForm + contentArticle + contentEnd;
@@ -102,7 +102,6 @@ AppMobile.prototype.showTouristSection = function(){
     var contentEnd = '<div class="wrapper-info-explorer"><p class="info-goldn-explorer">Je visite</p><input type="text" name="city-name" class="city-name"><p class="info-goldn-explorer">,<br>  je veux découvrir ses charmes !</p></div><div id="wrap-articles clearfix"></div></div></div></div>';
 
     app.innerHTML = header + contentStart + contentFiltre + contentEnd;
-
 
     // filtre
     this.filtre = document.querySelector('.container-filtre');
