@@ -61,7 +61,7 @@ AppMobile.prototype.onAuthStateChanged = function(user) {
         // not connected
         var app = document.getElementById('app');
         app.className = "notConnected";
-        app.innerHTML = '<button class="signIn" id="sign-in-google">Se connecter avec G+</button><div class="connected-border"></div>';
+        app.innerHTML = '<button class="signIn" id="sign-in-google">Connexion avec G+</button><div class="connected-border"></div>';
 
         document.querySelector('#sign-in-google').addEventListener('click', this.signInGoogle.bind(this));
     }
