@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=500, initial-scale=1">
         <title>App Mobile</title>
         <link rel="stylesheet" href="styles/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
     </head>
     <body>
-        <h1>HOMEPAGE</h1>
+        <!-- <h1>HOMEPAGE</h1>
         <button hidden id="sign-out">
             Sign-out
         </button>
@@ -21,27 +21,28 @@
                 <li><a href="#" class="active">Inspirer</a></li>
                 <li><a href="#">Explorer</a></li>
             </ul>
-        </header>
+        </header> -->
         <!-- DEBUT de la partie "faire explorer" -->
         <main class="discover">
-            <div class="container-add-article" style="display:none;">
+            <!-- <div class="container-add-article" >
                 <p>Ajouter</p>
                 <form class="add-article" >
                     <label>Le nom de votre perle</label>
                     <input type="text" name="title" value="" class="title-input-add">
                     <label>Décrivez votre perle</label>
-                    <textarea name="describe" rows="8" cols="80">
+                    <textarea name="describe" rows="8" cols="20">
                     </textarea>
                     <label>L'adresse de votre perle</label>
                     <input type="text" name="adress" value="">
                     <input type="image" src="#" value="Ajouter une image" class="button-image"/>
                     <button type="button" name="button" class="button-add-article">OK</button>
                 </form>
-            </div>
+            </div> -->
             <div class="container-all-articles clearfix">
                 <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
-                <p class="info-goldN">J'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d'autres habitants de <span class="choose-city">Tokyo</span>, j’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p>
-                <div class="wrap-articles clearfix">
+                <p class="info-goldn">J'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d'autres habitants de <span class="choose-city">Tokyo</span>, j’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p>
+
+                <div class="wrap-articles clearfix" id="wrap-articles">
                     <div class="article-detail">
                         <h3>Scarmouche</h3>
                         <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
@@ -49,23 +50,49 @@
                             <img src="#" alt="">
                             <p class="name-author">Auteur</p>
                         </div> -->
-                    </div>
-                    <div class="article-detail">
                         <div class="container-address">
                             <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
                         </div>
                     </div>
-                    <div class="img-article-detail">
-                        <img src="images/scarmouche.jpg" alt="">
-                    </div>
-                    <div class="container-advice">
-                        <div class="approve">
-                            <p>j'approuve</p>
+                    <div class="article-detail">
+                        <div class="img-article-detail">
+                            <img src="images/scaramouche.jpg" alt="">
                         </div>
-                        <div class="dislike">
-                            <img src="#" alt="dislike image">
+                        <div class="container-advice">
+                            <div class="approve">
+                                <p>J'approuve</p>
+                            </div>
+                            <div class="dislike">
+                                <img src="images/dislike.svg" alt="dislike image">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="wrap-articles clearfix" id="wrap-articles">
+                    <div class="article-detail">
+                        <h3>Scarmouche</h3>
+                        <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
+                        <!-- <div class="container-author">
+                            <img src="#" alt="">
+                            <p class="name-author">Auteur</p>
+                        </div> -->
+                        <div class="container-address">
+                            <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
                         </div>
                     </div>
+                    <div class="article-detail">
+                        <div class="img-article-detail">
+                            <img src="images/scaramouche.jpg" alt="">
+                        </div>
+                        <div class="container-advice">
+                            <div class="approve">
+                                <p>J'approuve</p>
+                            </div>
+                            <div class="dislike">
+                                <img src="images/dislike.svg" alt="dislike image">
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </main>
