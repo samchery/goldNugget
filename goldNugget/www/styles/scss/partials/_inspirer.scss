@@ -1,35 +1,53 @@
 .discover {
-    .container-add-article {
-        h2 {
+    width: 100%;
+    padding: 15px;
+    background: green;
+    color: #fff;
+    .container-all-articles {
+        h2 { 
+            width: 345px;
+            height: 60px;
+            font-family: Raleway;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: center;
             .choose-city {
-
+                font-weight: 400;
             }
+        }
+        .info-goldN {
+            width: 100%;
+            margin: 20px 0;
+            padding: 0 13px;
+            font-size: 16px; 
         }
     }
 }
 
-.container-add-article {
-    .add-article {
+
+.wrap-articles {
+    width: 100%;
+    padding: 10px 0 10px 12px;
+    background: #fff;
+    color: #4a4a4a;
+    border-radius: 6px;
+    .article-detail {
+        float: left;
         h3 {
-
+            display: block;
+            font-size: 24px;
         }
-        p {
-
-        }
-        textarea {
-
-        }
-    }
-}
-
-.container-add-article {
-    .img-article {
-        .picture-place {
-            img {
-
-            }
+       .info-city {
+            width: 215px;
+            font-size: 16px;
+            padding: 14px 9px 0 0;
         }
     }
 }
-
-
+.container-address {
+    .street-address {
+        font-size: 14px;
+        font-weight: 100;
+    }
+}

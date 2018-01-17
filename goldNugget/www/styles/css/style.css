@@ -1,3 +1,62 @@
+body {
+  font-family: 'Raleway', sans-serif !important; }
 
+.discover {
+  width: 100%;
+  padding: 15px;
+  background: green;
+  color: #fff; }
+  .discover .container-all-articles h2 {
+    width: 345px;
+    height: 60px;
+    font-family: Raleway;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center; }
+    .discover .container-all-articles h2 .choose-city {
+      font-weight: 400; }
+  .discover .container-all-articles .info-goldN {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 13px;
+    font-size: 16px; }
+
+.wrap-articles {
+  width: 100%;
+  padding: 10px 0 10px 12px;
+  background: #fff;
+  color: #4a4a4a;
+  border-radius: 6px; }
+  .wrap-articles .article-detail {
+    float: left; }
+    .wrap-articles .article-detail h3 {
+      display: block;
+      font-size: 24px; }
+    .wrap-articles .article-detail .info-city {
+      width: 215px;
+      font-size: 16px;
+      padding: 14px 9px 0 0; }
+
+.container-address .street-address {
+  font-size: 14px;
+  font-weight: 100; }
+
+* {
+  margin: 0 auto;
+  padding: 0; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */
