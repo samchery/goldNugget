@@ -1,0 +1,26 @@
+.container-header {
+    background: red;
+    display: flex;
+    align-items: center;
+}
+
+.link-logo {
+    display: inline-block;
+
+    .logo-header {
+        width: 46px;
+        height: 43px;
+    }
+}
+
+.nav-header{
+    display: inline-block;
+
+    .container-links-nav {
+        list-style: none;
+
+        .list-links-nav {
+            display: inline-block;
+        }
+    }
+}

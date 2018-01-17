@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=500, initial-scale=1">
+        <!-- <meta name="viewport" content="width=500, initial-scale=1"> -->
         <title>App Mobile</title>
         <link rel="stylesheet" href="styles/css/style.css">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
     </head>
     <body>
@@ -17,22 +17,24 @@
         <button hidden id="sign-in-google">
             Sign-in with Google
         </button>
-        <header>
-            <a href="#"><img src="#" alt="logo"></a>
-            <ul>
-                <li><a href="#" class="active">Inspirer</a></li>
-                <li><a href="#">Explorer</a></li>
-            </ul>
+        <header class="container-header">
+            <a href="#" class="link-logo"><img src="images/logo.svg" alt="logo" class="logo-header"></a>
+            <nav class="nav-header">
+                <ul class="container-links-nav">
+                    <li class="list-links-nav"><a href="#" class="inspirer active">Inspirer</a></li>
+                    <li class="list-links-nav"><a href="#" class="explorer">Explorer</a></li>
+                </ul>
+            </nav>
         </header>
         <!-- DEBUT de la partie "faire explorer" -->
-        <main class="discover" style="display:none;">
+        <main class="discover">
             <div class="container-add-article">
-                <p>Ajouter</p>
+                <p class="onglet-add">Ajouter</p>
                 <form class="add-article">
                     <label>Le nom de votre perle</label>
                     <input type="text" name="title" value="" class="title-input-add">
                     <label>Décrivez votre perle</label>
-                    <textarea name="describe" rows="8" cols="80">
+                    <textarea name="describe" rows="8" cols="40">
                     </textarea>
                     <label>L'adresse de votre perle</label>
                     <input type="text" name="adress" value="">
@@ -40,7 +42,7 @@
                     <button type="button" name="button" class="button-add-article">OK</button>
                 </form>
             </div>
-            <div class="container-all-articles">
+            <div class="container-all-articles" style="display:none;">
                 <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
                 <p>J'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d'autres habitants de <span class="choose-city">Tokyo</span>, j’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p>
                 <div id="wrap-article">
@@ -75,7 +77,7 @@
         <!-- FIN de la partie "faire explorer" -->
         <!-- rmq: Dans le header, la classe active switchera sur le li "visiter" -->
         <!-- DEBUT de la partie "visiter" -->
-        <main class="visit">
+        <main class="visit" style="display:none;">
             <div class="container-all-articles">
                 <h2>Profitez des trouvailles de la ville de <span class="choose-city">Paris</span></h2>
                 <p>Je visite <input type="text" name="" value="Paris">,</p>
