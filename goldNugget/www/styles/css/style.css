@@ -43,14 +43,24 @@ main {
   .nav-header .container-links-nav {
     list-style: none; }
     .nav-header .container-links-nav .list-links-nav {
-      display: inline-block; }
+      display: inline-block;
+      border-bottom: 1px solid white; }
     .nav-header .container-links-nav .inspirer, .nav-header .container-links-nav .explorer {
       font-weight: 200;
       color: #fff;
-      font-size: 18px; }
+      font-size: 18px;
+      text-decoration: none; }
       .nav-header .container-links-nav .inspirer.active, .nav-header .container-links-nav .explorer.active {
         font-weight: 700;
         font-size: 24px; }
+
+.list-links-nav-inspirer.active {
+  padding: 0 4px 4px;
+  border-bottom: 2px solid #00A7FF; }
+
+.list-links-nav-explorer.active {
+  padding: 0 4px 4px;
+  border-bottom: 2px solid #FFA751; }
 
 .discover {
   width: 100%;
@@ -181,8 +191,7 @@ main {
   padding: 0 15px;
   padding-top: 1%;
   background: #fff;
-  position: relative;
-  display: none; }
+  position: relative; }
 
 .label-form {
   width: 100%;
