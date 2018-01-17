@@ -19,7 +19,10 @@
         <!-- DEBUT de la partie "faire explorer" -->
         <main class="discover">
             <div class="container-add-article">
-                <p class="onglet-add">Ajouter</p>
+                <div class="onglet-add">
+                    <img src="images/bouton.png" alt="bouton image d'ajout" class="image-add">
+                    <p class="text-add">Ajouter</p>
+                </div>
                 <form class="add-article">
                     <label class="label-form">Le nom de votre perle</label>
                     <input type="text" name="title" value="" class="title-input-add input-form">
@@ -28,7 +31,7 @@
                     </textarea>
                     <label class="label-form">L'adresse de votre perle</label>
                     <input type="text" name="adress" value="" class="input-form">
-                    <input type="image" value="Ajouter une image" class="button-image"/>
+                    <input type="file" value="Ajouter une image" class="button-image"/>
                     <button type="button" name="button" class="button-add-article">OK</button>
                 </form>
             </div>

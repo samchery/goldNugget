@@ -1,10 +1,12 @@
 .discover {
     width: 100%;
-    padding: 15px;
     color: #fff;
     .container-all-articles {
+        padding: 0 15px;
+        width: 100%;
         position: relative;
-        h2 { 
+        z-index: 1;
+        h2 {
             width: 345px;
             height: 60px;
             font-family: Raleway;
