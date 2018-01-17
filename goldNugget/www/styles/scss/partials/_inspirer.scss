@@ -1,35 +1,111 @@
 .discover {
-    .container-add-article {
-        h2 {
-            .choose-city {
-
-            }
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    .container-all-articles {
+        position: relative;
+        h2 { 
+            width: 345px;
+            height: 60px;
+            font-family: Raleway;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: center;
         }
     }
 }
-
-.container-add-article {
-    .add-article {
+.info-goldn {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 13px;
+    font-size: 16px !important;
+}
+.choose-city {
+    font-weight: 300;
+}
+.wrap-articles {
+    position: relative;
+    width: 100%;
+    height: 185px;
+    padding: 10px 0 10px 12px;
+    margin-bottom: 25px;
+    background: #fff;
+    color: #4a4a4a;
+    border-radius: 6px;
+    .article-detail {
+        float: left;
         h3 {
-
+            display: block;
+            font-size: 24px;
         }
+       .info-city {
+            width: 215px;
+            font-size: 16px !important;
+            padding: 14px 9px 0 0;
+            font-weight: 200;
+        }
+    }
+}
+.container-address {
+    position: relative;
+    .street-address {
+        position: absolute;
+        bottom: -30px;
+        font-size: 14px;
+        font-weight: 100;
+    }
+}
+.img-article-detail {
+    position: absolute;
+    right: 0;
+    width: 110px;
+    height: 100%;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 0 6px 6px 0;
+    img {
+        position: absolute;
+        left: -30px;
+        width: 250%;
+        height: 185px;
+    }
+}
+
+.container-advice {
+    width: 100%;
+    color: #fff;
+    .approve {
+        position: absolute;
+        bottom: -15px;
+        right: 72px;
+        width: 85px;
+        height: 33px;
+        border-radius: 3px;
+        background-image: linear-gradient(124deg, #00a6ff, #00fffa);
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
         p {
-
+            font-size: 12px;
+            text-align: center;
+            padding:9px 0;
         }
-        textarea {
-
+    }
+    .dislike {
+        position: absolute;
+        bottom: -15px;
+        right: 22px;
+        width: 43px;
+        height: 33px;
+        border-radius: 3px;
+        background-image: linear-gradient(128deg, #ffa751, #ffe259);
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+        img {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -40%);
+            width: 26px;
         }
     }
 }
-
-.container-add-article {
-    .img-article {
-        .picture-place {
-            img {
-
-            }
-        }
-    }
-}
-
-

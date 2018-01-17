@@ -2,21 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!-- <meta name="viewport" content="width=500, initial-scale=1"> -->
         <title>App Mobile</title>
         <link rel="stylesheet" href="styles/css/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
     </head>
     <body>
-        <h1>HOMEPAGE</h1>
-
-        <button hidden id="sign-out">
-            Sign-out
-        </button>
-        <button hidden id="sign-in-google">
-            Sign-in with Google
-        </button>
         <header class="container-header">
             <a href="#" class="link-logo"><img src="images/logo.svg" alt="logo" class="logo-header"></a>
             <nav class="nav-header">
@@ -42,33 +32,59 @@
                     <button type="button" name="button" class="button-add-article">OK</button>
                 </form>
             </div>
-            <div class="container-all-articles" style="display:none;">
+            <div class="container-all-articles clearfix">
                 <h2>Révélez vos idées ... de la ville de <span class="choose-city">Tokyo</span></h2>
-                <p>J'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d'autres habitants de <span class="choose-city">Tokyo</span>, j’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p>
-                <div id="wrap-article">
-                    <div class="">
-                        <h3>Titre</h3>
-                        <p>Profitez des trouvailles Profitez des trouvailles Profitez des trouvailles</p>
-                        <div class="container-author">
+                <p class="info-goldn">J'habite <span class="choose-city">Tokyo</span>, et je veux faire profiter aux visiteurs le charme de ma ville. Ici, comme d'autres habitants de <span class="choose-city">Tokyo</span>, j’ajoute mes coups de coeur et mes idées découverte pour les partager aux visiteurs curieux !</p>
+
+                <div class="wrap-articles clearfix" id="wrap-articles">
+                    <div class="article-detail">
+                        <h3>Scarmouche</h3>
+                        <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
+                        <!-- <div class="container-author">
                             <img src="#" alt="">
                             <p class="name-author">Auteur</p>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <img src="#" alt="">
-                        </div>
+                        </div> -->
                         <div class="container-address">
-                            <p class="street-address">36, Boulevard Beau-séjour</p>
-                            <p class="location-adress">75017 Paris             </p>
+                            <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
                         </div>
                     </div>
-                    <div class="container-advice">
-                        <div class="approve">
-                            <p>j'approuve</p>
+                    <div class="article-detail">
+                        <div class="img-article-detail">
+                            <img src="images/scaramouche.jpg" alt="">
                         </div>
-                        <div class="dislike">
-                            <img src="#" alt="dislike image">
+                        <div class="container-advice">
+                            <div class="approve">
+                                <p>J'approuve</p>
+                            </div>
+                            <div class="dislike">
+                                <img src="images/dislike.svg" alt="dislike image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-articles clearfix" id="wrap-articles">
+                    <div class="article-detail">
+                        <h3>Scarmouche</h3>
+                        <p class="info-city">Il a beau être le 3e meilleure glacier de Paris, être situé à deux pas de la place des abbesses et avoir une…</p>
+                        <!-- <div class="container-author">
+                            <img src="#" alt="">
+                            <p class="name-author">Auteur</p>
+                        </div> -->
+                        <div class="container-address">
+                            <p class="street-address">22 Rue la Vieuville, 75018 Paris</p>
+                        </div>
+                    </div>
+                    <div class="article-detail">
+                        <div class="img-article-detail">
+                            <img src="images/scaramouche.jpg" alt="">
+                        </div>
+                        <div class="container-advice">
+                            <div class="approve">
+                                <p>J'approuve</p>
+                            </div>
+                            <div class="dislike">
+                                <img src="images/dislike.svg" alt="dislike image">
+                            </div>
                         </div>
                     </div>
                 </div>
