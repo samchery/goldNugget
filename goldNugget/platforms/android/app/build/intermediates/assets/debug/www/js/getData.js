@@ -1,5 +1,4 @@
 AppMobile.prototype.loadArticles = function(city) {
-    console.log(city);
     this.articlesRef = this.database.ref('articles').orderByChild("ville").equalTo(city); // recup données de BDD
     // Make sure we remove all previous listeners.
     this.articlesRef.off(); //remove previous listener
@@ -77,8 +76,11 @@ AppMobile.prototype.createFormArticle = function() {
         this.form.appendChild(form);
         this.addArticleButton = document.querySelector('.container-add-article .form-button');
         this.addArticleButton.addEventListener('click', this.addArticle.bind(this));
+
+        document.querySelector('.text-add').innerHTML = 'Fermer';
     } else{
         document.querySelector('.container-add-article form').remove();
+        document.querySelector('.text-add').innerHTML = 'Ajouter';
     }
 };
 
@@ -101,8 +103,14 @@ AppMobile.prototype.addArticle = function() {
                 description: content,
                 address : address,
                 img: selectedFile.name,
-                category: select
-            });
+                category: select,
+                city: 'paris'
+            }).then(function() {
+                document.querySelector('.container-add-article form').innerHTML = '<p style="text-align:center; padding: 15px;">Perle ajoutée ! :)</p>';
+              }.bind(this)).catch(function(error) {
+                console.error('Error writing new message to Firebase Database', error);
+              });
+            
         }
     });
 };

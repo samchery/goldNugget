@@ -10,7 +10,7 @@
   "cordova-plugin-buildinfo": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-buildinfo@2.0.1"
+      "id": "cordova-plugin-buildinfo@^2.0.1"
     },
     "is_top_level": true,
     "variables": {}
